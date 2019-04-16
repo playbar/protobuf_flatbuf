@@ -11,8 +11,9 @@ ADD_DEFINITIONS(-DRAPIDJSON_HAS_STDSTRING)
 ADD_DEFINITIONS(-DLIBICONV_PLUG)
 #ADD_DEFINITIONS(-DGOOGLE_PROTOBUF_NO_RTTI)
 
-add_subdirectory(pb)
-add_subdirectory(pbtest)
 add_subdirectory(fb)
+add_subdirectory(pbtest)
+#add_subdirectory(pb)
+add_subdirectory(pbnew)
 add_subdirectory(fbtest)
 

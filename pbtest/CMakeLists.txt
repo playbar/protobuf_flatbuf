@@ -7,14 +7,14 @@ add_executable(pbreader
 target_include_directories(pbreader  PUBLIC
 		${CMAKE_CURRENT_SOURCE_DIR}
 		)
-target_link_libraries(pbreader  protobuflib)
+target_link_libraries(pbreader  protobuf)
 
 ########
 add_executable(pbwriter
 		writer.cpp
 		protos/Sample.pb.cc
 		)
-target_link_libraries(pbwriter protobuflib)
+target_link_libraries(pbwriter protobuf)
 
 target_include_directories(pbwriter  PUBLIC
 		${CMAKE_CURRENT_SOURCE_DIR}
@@ -30,7 +30,7 @@ target_include_directories(data_write  PUBLIC
 		${CMAKE_CURRENT_SOURCE_DIR}/../pb
 		${CMAKE_CURRENT_SOURCE_DIR}/protos
 		${CMAKE_CURRENT_SOURCE_DIR})
-target_link_libraries(data_write protobuflib)
+target_link_libraries(data_write protobuf)
 
 #######
 set(data_read_SRCS
@@ -41,4 +41,4 @@ target_include_directories(data_read  PUBLIC
 		${CMAKE_CURRENT_SOURCE_DIR}/../pb
 		${CMAKE_CURRENT_SOURCE_DIR}/protos
 		${CMAKE_CURRENT_SOURCE_DIR})
-target_link_libraries(data_read protobuflib)
+target_link_libraries(data_read protobuf)

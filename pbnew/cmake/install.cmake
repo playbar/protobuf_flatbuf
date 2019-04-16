@@ -95,7 +95,7 @@ foreach(_file ${nobase_dist_proto_DATA})
       RENAME "${_file_name}")
   else()
     message(AUTHOR_WARNING "The file \"${_file_from}\" is listed in "
-      "\"${protobuf_SOURCE_DIR}/../src/Makefile.am\" as nobase_dist_proto_DATA "
+      "\"${protobuf_SOURCE_DIR}/src/Makefile.am\" as nobase_dist_proto_DATA "
       "but there not exists. The file will not be installed.")
   endif()
 endforeach()

@@ -21,7 +21,7 @@ main(int argc, char* argv[])
     flatbuffers::FlatBufferBuilder fbb;
     int count;
 
-    count = atoi(argv[1]);
+    count = 2; // atoi(argv[1]);
 
     int fd = open("buf", O_RDWR | O_CREAT, 0644);
     if (fd == -1) {

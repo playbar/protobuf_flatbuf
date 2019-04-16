@@ -1,18 +1,18 @@
 add_executable(fbreader
-		reader.cpp
+		fbreader.cpp
 		)
 
 target_include_directories(fbreader  PUBLIC
 		${CMAKE_CURRENT_SOURCE_DIR}
 		${CMAKE_CURRENT_SOURCE_DIR}/../fb/include
 		)
-target_link_libraries(fbreader  protobuflib)
+target_link_libraries(fbreader  flatbuffers)
 
 ########
 add_executable(fbwriter
-		writer.cpp
+		fbwriter.cpp
 		)
-target_link_libraries(fbwriter protobuflib)
+target_link_libraries(fbwriter flatbuffers)
 
 target_include_directories(fbwriter  PUBLIC
 		${CMAKE_CURRENT_SOURCE_DIR}

@@ -1,0 +1,10 @@
+// protoc Sample.proto --cpp_out=.
+
+package Sample;
+
+message Sample {
+    required int32 id = 1;
+    required string name = 2;
+    required int32 ip = 3;
+    repeated int32 addr_list = 4;
+}

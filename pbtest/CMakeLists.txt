@@ -24,19 +24,21 @@ target_include_directories(pbwriter  PUBLIC
 ##########
 set(data_write_SRCS
 		data_write.cc
-		data.pb.cc)
+		protos/data.pb.cc)
 add_executable(data_write ${data_write_SRCS})
 target_include_directories(data_write  PUBLIC
 		${CMAKE_CURRENT_SOURCE_DIR}/../pb
+		${CMAKE_CURRENT_SOURCE_DIR}/protos
 		${CMAKE_CURRENT_SOURCE_DIR})
 target_link_libraries(data_write protobuflib)
 
 #######
 set(data_read_SRCS
 		data_read.cc
-		data.pb.cc)
+		protos/data.pb.cc)
 add_executable(data_read ${data_read_SRCS})
 target_include_directories(data_read  PUBLIC
 		${CMAKE_CURRENT_SOURCE_DIR}/../pb
+		${CMAKE_CURRENT_SOURCE_DIR}/protos
 		${CMAKE_CURRENT_SOURCE_DIR})
 target_link_libraries(data_read protobuflib)

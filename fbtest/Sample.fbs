@@ -1,5 +1,4 @@
-
-namespace Sample;
+// ./flatc --cpp Sample.fbs
 
 table Sample {
     id: int;

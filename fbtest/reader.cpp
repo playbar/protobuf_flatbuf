@@ -50,7 +50,7 @@ main()
             return -1;
         }
 
-        auto sample = Sample::GetSample(buf);
+        auto sample = GetSample(buf);
         //std::cout << "sample=id:" << sample->id() << ", name:"
             //<< sample->name()->c_str() << ", ip:" << sample->ip()
             //<< ", addr size: " << sample->addr_list()->size() << std::endl;

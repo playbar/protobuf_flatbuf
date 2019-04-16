@@ -13,5 +13,6 @@ ADD_DEFINITIONS(-DLIBICONV_PLUG)
 
 add_subdirectory(pb)
 add_subdirectory(pbtest)
-#add_subdirectory(fbtest)
+add_subdirectory(fb)
+add_subdirectory(fbtest)
 

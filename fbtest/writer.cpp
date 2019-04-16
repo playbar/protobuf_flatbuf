@@ -41,7 +41,7 @@ main(int argc, char* argv[])
             addrs_vec.push_back(j);
         }
         auto addrs = fbb.CreateVector(addrs_vec);
-        auto mloc = Sample::CreateSample(fbb, i, name, i + j + 100, addrs);
+        auto mloc = CreateSample(fbb, i, name, i + j + 100, addrs);
         fbb.Finish(mloc);
 
         // write len

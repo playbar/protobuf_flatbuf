@@ -55,6 +55,12 @@ main()
             << sample->name()->c_str() << ", ip:" << sample->ip()
             << ", addr size: " << sample->addr_list()->size() << std::endl;
 
+        auto addrlist = sample->addr_list();
+        for( auto iter = addrlist->begin(); iter != addrlist->end(); ++iter )
+        {
+            std::cout<< "addr : " << *iter << std::endl;
+        }
+
     }
 
     close(fd);

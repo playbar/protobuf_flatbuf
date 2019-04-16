@@ -1,4 +1,4 @@
-// protoc Sample.proto --cpp_out=.
+// ./protoc Sample.proto --cpp_out=.
 
 package Sample;
 

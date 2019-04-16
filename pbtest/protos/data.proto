@@ -1,3 +1,4 @@
+// ./protoc data.proto --cpp_out=.
 // [START declaration]
 //syntax = "proto3";
 package tutorial;

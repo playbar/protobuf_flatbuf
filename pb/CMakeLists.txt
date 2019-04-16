@@ -1,6 +1,6 @@
 # protobuf version 2.5.0
 #
-add_library(protobuf STATIC
+add_library(libprotobuf STATIC
 		${CMAKE_CURRENT_SOURCE_DIR}/google/protobuf/io/coded_stream.cc
 		${CMAKE_CURRENT_SOURCE_DIR}/google/protobuf/io/tokenizer.cc
 		${CMAKE_CURRENT_SOURCE_DIR}/google/protobuf/io/zero_copy_stream.cc
@@ -31,7 +31,7 @@ add_library(protobuf STATIC
 		${CMAKE_CURRENT_SOURCE_DIR}/google/protobuf/wire_format_lite.cc
             )
 
-target_include_directories(protobuf PRIVATE
+target_include_directories(libprotobuf PRIVATE
                           ${CMAKE_CURRENT_SOURCE_DIR}
 		)
 ####

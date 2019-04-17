@@ -40,3 +40,15 @@ target_include_directories(TestFlatRead  PUBLIC
 		${CMAKE_CURRENT_SOURCE_DIR}
 		${CMAKE_CURRENT_SOURCE_DIR}/../fb/include
 		)
+
+########
+add_executable(FlatBufferDemo
+		FlatBufferDemo.cpp
+		)
+target_link_libraries(FlatBufferDemo flatbuffers)
+
+target_include_directories(FlatBufferDemo  PUBLIC
+		${CMAKE_CURRENT_SOURCE_DIR}
+		${CMAKE_CURRENT_SOURCE_DIR}/../fb/include
+		)
+

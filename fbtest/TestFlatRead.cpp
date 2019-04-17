@@ -5,6 +5,7 @@
 #include <iostream>
 #include <flatbuffers/util.h>
 #include "flatbuffers/flatbuffers.h"
+#include "flatbuffers/idl.h"
 #include "util.h"
 #include "string"
 #include "TestFlat_generated.h"
@@ -19,11 +20,13 @@ int main(int argc, char* argv[])
     bool ok = flatbuffers::LoadFile("texture.bin", false, &binaryfile);
 
     flatbuffers::FlatBufferBuilder builderOut;
-    TextureBuilder* texBuilder = new TextureBuilder(builderOut);
     builderOut.PushBytes(reinterpret_cast<unsigned char*>(const_cast<char *>(binaryfile.c_str())), binaryfile.size());
     std::cout << builderOut.GetSize() << std::endl;
 
-    auto model = GetTexture(builderOut.GetBufferPointer());
+
+    TextureBuilder* texBuilder = new TextureBuilder(builderOut);
+
+    auto model = GetTexture(builderOut.GetCurrentBufferPointer());
 
     int outNum = model->num_textures();
     const flatbuffers::Vector<flatbuffers::Offset<TextureData>>* outTex = model->textures();

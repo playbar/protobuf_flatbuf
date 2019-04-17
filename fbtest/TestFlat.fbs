@@ -25,8 +25,9 @@ table Texture {
     textures:[TextureData];
     num_test:short = 30;
     num_test1:short (deprecated);
-        num_test2:short;
+    num_test2:short;
     test_append:TestAppend;
 }
 
 root_type Texture;
+

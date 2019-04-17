@@ -10,10 +10,10 @@
 
 using namespace std;
 
-flatbuffers::FlatBufferBuilder build_data;
 
 void serialize() {
 
+    flatbuffers::FlatBufferBuilder build_data;
     // super
     auto position_fb = Layer::CreatePoint_Fb(build_data, 1, 1);
     auto super_fb = Layer::CreateNode_Fb(build_data, build_data.CreateString("father"), position_fb);
@@ -35,6 +35,9 @@ void serialize() {
     build_data.Finish(layer_fb);
 
     cout<<"serialize size:"<<build_data.GetSize()<<endl;
+
+    flatbuffers::SaveFile("layer.bin", reinterpret_cast<char*>(build_data.GetBufferPointer()), build_data.GetSize(), true);
+
 }
 
 void deserialize() {
@@ -49,10 +52,10 @@ void deserialize() {
 
     flatbuffers::FlatBufferBuilder builder_out;
     builder_out.PushBytes(reinterpret_cast<unsigned char*>(const_cast<char*>(binaryfile.c_str())), binaryfile.size());
-    cout<<"deserialize size:"<<build_data.GetSize()<<endl;
+    cout<<"deserialize size:"<<builder_out.GetSize()<<endl;
 
     // verify
-    flatbuffers::Verifier layer_verify(builder_out.GetCurrentBufferPointer(), build_data.GetSize());
+    flatbuffers::Verifier layer_verify(builder_out.GetCurrentBufferPointer(), builder_out.GetSize());
     bool verify_flag = Layer::VerifyLayer_FbBuffer(layer_verify);
     if (!verify_flag) {
         return;
@@ -77,7 +80,7 @@ int main(int argc, const char * argv[]) {
     // 序列化
     serialize();
 
-    flatbuffers::SaveFile("layer.bin", reinterpret_cast<char*>(build_data.GetBufferPointer()), build_data.GetSize(), true);
+    cout<<"deserialize ----" << endl;
 
     // 反序列化
     deserialize();

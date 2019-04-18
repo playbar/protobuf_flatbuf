@@ -1,12 +1,9 @@
 // ./flatc --cpp Layer_Fb.fbs
 
-namespace Layer;
+include 'Layer_point.fbs';
 
-table Point_Fb
-{
-    x:float;
-    y:float;
-}
+
+namespace Layer;
 
 table Node_Fb
 {

@@ -6,63 +6,13 @@
 
 #include "flatbuffers/flatbuffers.h"
 
-namespace Layer {
+#include "Layer_point_generated.h"
 
-struct Point_Fb;
+namespace Layer {
 
 struct Node_Fb;
 
 struct Layer_Fb;
-
-struct Point_Fb FLATBUFFERS_FINAL_CLASS : private flatbuffers::Table {
-  enum FlatBuffersVTableOffset FLATBUFFERS_VTABLE_UNDERLYING_TYPE {
-    VT_X = 4,
-    VT_Y = 6
-  };
-  float x() const {
-    return GetField<float>(VT_X, 0.0f);
-  }
-  float y() const {
-    return GetField<float>(VT_Y, 0.0f);
-  }
-  bool Verify(flatbuffers::Verifier &verifier) const {
-    return VerifyTableStart(verifier) &&
-           VerifyField<float>(verifier, VT_X) &&
-           VerifyField<float>(verifier, VT_Y) &&
-           verifier.EndTable();
-  }
-};
-
-struct Point_FbBuilder {
-  flatbuffers::FlatBufferBuilder &fbb_;
-  flatbuffers::uoffset_t start_;
-  void add_x(float x) {
-    fbb_.AddElement<float>(Point_Fb::VT_X, x, 0.0f);
-  }
-  void add_y(float y) {
-    fbb_.AddElement<float>(Point_Fb::VT_Y, y, 0.0f);
-  }
-  explicit Point_FbBuilder(flatbuffers::FlatBufferBuilder &_fbb)
-        : fbb_(_fbb) {
-    start_ = fbb_.StartTable();
-  }
-  Point_FbBuilder &operator=(const Point_FbBuilder &);
-  flatbuffers::Offset<Point_Fb> Finish() {
-    const auto end = fbb_.EndTable(start_);
-    auto o = flatbuffers::Offset<Point_Fb>(end);
-    return o;
-  }
-};
-
-inline flatbuffers::Offset<Point_Fb> CreatePoint_Fb(
-    flatbuffers::FlatBufferBuilder &_fbb,
-    float x = 0.0f,
-    float y = 0.0f) {
-  Point_FbBuilder builder_(_fbb);
-  builder_.add_y(y);
-  builder_.add_x(x);
-  return builder_.Finish();
-}
 
 struct Node_Fb FLATBUFFERS_FINAL_CLASS : private flatbuffers::Table {
   enum FlatBuffersVTableOffset FLATBUFFERS_VTABLE_UNDERLYING_TYPE {

@@ -31,6 +31,9 @@
 #include <google/protobuf/message.h>
 #include <google/protobuf/repeated_field.h>  // IWYU pragma: export
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
+#include <google/protobuf/map.h>  // IWYU pragma: export
+#include <google/protobuf/map_entry.h>
+#include <google/protobuf/map_field_inl.h>
 #include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
@@ -47,7 +50,7 @@ struct TableStruct_Sample_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[1]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[2]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -58,13 +61,49 @@ namespace Sample {
 class Sample;
 class SampleDefaultTypeInternal;
 extern SampleDefaultTypeInternal _Sample_default_instance_;
+class Sample_MapDataEntry_DoNotUse;
+class Sample_MapDataEntry_DoNotUseDefaultTypeInternal;
+extern Sample_MapDataEntry_DoNotUseDefaultTypeInternal _Sample_MapDataEntry_DoNotUse_default_instance_;
 }  // namespace Sample
 PROTOBUF_NAMESPACE_OPEN
 template<> ::Sample::Sample* Arena::CreateMaybeMessage<::Sample::Sample>(Arena*);
+template<> ::Sample::Sample_MapDataEntry_DoNotUse* Arena::CreateMaybeMessage<::Sample::Sample_MapDataEntry_DoNotUse>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace Sample {
 
 // ===================================================================
+
+class Sample_MapDataEntry_DoNotUse : public ::PROTOBUF_NAMESPACE_ID::internal::MapEntry<Sample_MapDataEntry_DoNotUse, 
+    std::string, ::PROTOBUF_NAMESPACE_ID::int32,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32,
+    0 > {
+public:
+  typedef ::PROTOBUF_NAMESPACE_ID::internal::MapEntry<Sample_MapDataEntry_DoNotUse, 
+    std::string, ::PROTOBUF_NAMESPACE_ID::int32,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32,
+    0 > SuperType;
+  Sample_MapDataEntry_DoNotUse();
+  Sample_MapDataEntry_DoNotUse(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  void MergeFrom(const Sample_MapDataEntry_DoNotUse& other);
+  static const Sample_MapDataEntry_DoNotUse* internal_default_instance() { return reinterpret_cast<const Sample_MapDataEntry_DoNotUse*>(&_Sample_MapDataEntry_DoNotUse_default_instance_); }
+  static bool ValidateKey(std::string* s) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(s->data(), s->size(), ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE, "Sample.Sample.MapDataEntry.key");
+ }
+  static bool ValidateValue(void*) { return true; }
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& other) final;
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Sample_2eproto);
+    return ::descriptor_table_Sample_2eproto.file_level_metadata[0];
+  }
+
+  public:
+};
+
+// -------------------------------------------------------------------
 
 class Sample :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Sample.Sample) */ {
@@ -91,13 +130,6 @@ class Sample :
     return *this;
   }
 
-  inline const ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet& unknown_fields() const {
-    return _internal_metadata_.unknown_fields();
-  }
-  inline ::PROTOBUF_NAMESPACE_ID::UnknownFieldSet* mutable_unknown_fields() {
-    return _internal_metadata_.mutable_unknown_fields();
-  }
-
   static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
     return GetDescriptor();
   }
@@ -115,7 +147,7 @@ class Sample :
                &_Sample_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    0;
+    1;
 
   void Swap(Sample* other);
   friend void swap(Sample& a, Sample& b) {
@@ -180,12 +212,13 @@ class Sample :
 
   // nested types ----------------------------------------------------
 
+
   // accessors -------------------------------------------------------
 
-  // repeated int32 addr_list = 4;
+  // repeated int32 addr_list = 3;
   int addr_list_size() const;
   void clear_addr_list();
-  static const int kAddrListFieldNumber = 4;
+  static const int kAddrListFieldNumber = 3;
   ::PROTOBUF_NAMESPACE_ID::int32 addr_list(int index) const;
   void set_addr_list(int index, ::PROTOBUF_NAMESPACE_ID::int32 value);
   void add_addr_list(::PROTOBUF_NAMESPACE_ID::int32 value);
@@ -194,8 +227,16 @@ class Sample :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::int32 >*
       mutable_addr_list();
 
-  // required string name = 2;
-  bool has_name() const;
+  // map<string, int32> map_data = 4;
+  int map_data_size() const;
+  void clear_map_data();
+  static const int kMapDataFieldNumber = 4;
+  const ::PROTOBUF_NAMESPACE_ID::Map< std::string, ::PROTOBUF_NAMESPACE_ID::int32 >&
+      map_data() const;
+  ::PROTOBUF_NAMESPACE_ID::Map< std::string, ::PROTOBUF_NAMESPACE_ID::int32 >*
+      mutable_map_data();
+
+  // string name = 2;
   void clear_name();
   static const int kNameFieldNumber = 2;
   const std::string& name() const;
@@ -207,34 +248,28 @@ class Sample :
   std::string* release_name();
   void set_allocated_name(std::string* name);
 
-  // required int32 id = 1;
-  bool has_id() const;
+  // int32 id = 1;
   void clear_id();
   static const int kIdFieldNumber = 1;
   ::PROTOBUF_NAMESPACE_ID::int32 id() const;
   void set_id(::PROTOBUF_NAMESPACE_ID::int32 value);
 
-  // required int32 ip = 3;
-  bool has_ip() const;
-  void clear_ip();
-  static const int kIpFieldNumber = 3;
-  ::PROTOBUF_NAMESPACE_ID::int32 ip() const;
-  void set_ip(::PROTOBUF_NAMESPACE_ID::int32 value);
-
   // @@protoc_insertion_point(class_scope:Sample.Sample)
  private:
   class HasBitSetters;
 
-  // helper for ByteSizeLong()
-  size_t RequiredFieldsByteSizeFallback() const;
-
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
-  ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::int32 > addr_list_;
+  mutable std::atomic<int> _addr_list_cached_byte_size_;
+  ::PROTOBUF_NAMESPACE_ID::internal::MapField<
+      Sample_MapDataEntry_DoNotUse,
+      std::string, ::PROTOBUF_NAMESPACE_ID::int32,
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32,
+      0 > map_data_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
   ::PROTOBUF_NAMESPACE_ID::int32 id_;
-  ::PROTOBUF_NAMESPACE_ID::int32 ip_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_Sample_2eproto;
 };
 // ===================================================================
@@ -246,103 +281,76 @@ class Sample :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // Sample
 
-// required int32 id = 1;
-inline bool Sample::has_id() const {
-  return (_has_bits_[0] & 0x00000002u) != 0;
-}
+// int32 id = 1;
 inline void Sample::clear_id() {
   id_ = 0;
-  _has_bits_[0] &= ~0x00000002u;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 Sample::id() const {
   // @@protoc_insertion_point(field_get:Sample.Sample.id)
   return id_;
 }
 inline void Sample::set_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000002u;
+  
   id_ = value;
   // @@protoc_insertion_point(field_set:Sample.Sample.id)
 }
 
-// required string name = 2;
-inline bool Sample::has_name() const {
-  return (_has_bits_[0] & 0x00000001u) != 0;
-}
+// string name = 2;
 inline void Sample::clear_name() {
   name_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  _has_bits_[0] &= ~0x00000001u;
 }
 inline const std::string& Sample::name() const {
   // @@protoc_insertion_point(field_get:Sample.Sample.name)
   return name_.GetNoArena();
 }
 inline void Sample::set_name(const std::string& value) {
-  _has_bits_[0] |= 0x00000001u;
+  
   name_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
   // @@protoc_insertion_point(field_set:Sample.Sample.name)
 }
 inline void Sample::set_name(std::string&& value) {
-  _has_bits_[0] |= 0x00000001u;
+  
   name_.SetNoArena(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
   // @@protoc_insertion_point(field_set_rvalue:Sample.Sample.name)
 }
 inline void Sample::set_name(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
-  _has_bits_[0] |= 0x00000001u;
+  
   name_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
   // @@protoc_insertion_point(field_set_char:Sample.Sample.name)
 }
 inline void Sample::set_name(const char* value, size_t size) {
-  _has_bits_[0] |= 0x00000001u;
+  
   name_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
   // @@protoc_insertion_point(field_set_pointer:Sample.Sample.name)
 }
 inline std::string* Sample::mutable_name() {
-  _has_bits_[0] |= 0x00000001u;
+  
   // @@protoc_insertion_point(field_mutable:Sample.Sample.name)
   return name_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline std::string* Sample::release_name() {
   // @@protoc_insertion_point(field_release:Sample.Sample.name)
-  if (!has_name()) {
-    return nullptr;
-  }
-  _has_bits_[0] &= ~0x00000001u;
-  return name_.ReleaseNonDefaultNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  
+  return name_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline void Sample::set_allocated_name(std::string* name) {
   if (name != nullptr) {
-    _has_bits_[0] |= 0x00000001u;
+    
   } else {
-    _has_bits_[0] &= ~0x00000001u;
+    
   }
   name_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name);
   // @@protoc_insertion_point(field_set_allocated:Sample.Sample.name)
 }
 
-// required int32 ip = 3;
-inline bool Sample::has_ip() const {
-  return (_has_bits_[0] & 0x00000004u) != 0;
-}
-inline void Sample::clear_ip() {
-  ip_ = 0;
-  _has_bits_[0] &= ~0x00000004u;
-}
-inline ::PROTOBUF_NAMESPACE_ID::int32 Sample::ip() const {
-  // @@protoc_insertion_point(field_get:Sample.Sample.ip)
-  return ip_;
-}
-inline void Sample::set_ip(::PROTOBUF_NAMESPACE_ID::int32 value) {
-  _has_bits_[0] |= 0x00000004u;
-  ip_ = value;
-  // @@protoc_insertion_point(field_set:Sample.Sample.ip)
-}
-
-// repeated int32 addr_list = 4;
+// repeated int32 addr_list = 3;
 inline int Sample::addr_list_size() const {
   return addr_list_.size();
 }
@@ -372,9 +380,29 @@ Sample::mutable_addr_list() {
   return &addr_list_;
 }
 
+// map<string, int32> map_data = 4;
+inline int Sample::map_data_size() const {
+  return map_data_.size();
+}
+inline void Sample::clear_map_data() {
+  map_data_.Clear();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::Map< std::string, ::PROTOBUF_NAMESPACE_ID::int32 >&
+Sample::map_data() const {
+  // @@protoc_insertion_point(field_map:Sample.Sample.map_data)
+  return map_data_.GetMap();
+}
+inline ::PROTOBUF_NAMESPACE_ID::Map< std::string, ::PROTOBUF_NAMESPACE_ID::int32 >*
+Sample::mutable_map_data() {
+  // @@protoc_insertion_point(field_mutable_map:Sample.Sample.map_data)
+  return map_data_.MutableMap();
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 
 // @@protoc_insertion_point(namespace_scope)
 

@@ -1,10 +1,11 @@
 // ./protoc Sample.proto --cpp_out=.
+syntax = "proto3";
 
 package Sample;
 
 message Sample {
-    required int32 id = 1;
-    required string name = 2;
-    required int32 ip = 3;
-    repeated int32 addr_list = 4;
+    int32 id = 1;
+    string name = 2;
+    repeated int32 addr_list = 3;
+    map<string, int32> map_data = 4;
 }

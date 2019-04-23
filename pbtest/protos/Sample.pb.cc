@@ -15,7 +15,12 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+extern PROTOBUF_INTERNAL_EXPORT_Sample_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Sample_MapDataEntry_DoNotUse_Sample_2eproto;
 namespace Sample {
+class Sample_MapDataEntry_DoNotUseDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Sample_MapDataEntry_DoNotUse> _instance;
+} _Sample_MapDataEntry_DoNotUse_default_instance_;
 class SampleDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Sample> _instance;
@@ -32,53 +37,77 @@ static void InitDefaultsscc_info_Sample_Sample_2eproto() {
   ::Sample::Sample::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Sample_Sample_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_Sample_Sample_2eproto}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Sample_Sample_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_Sample_Sample_2eproto}, {
+      &scc_info_Sample_MapDataEntry_DoNotUse_Sample_2eproto.base,}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_Sample_2eproto[1];
+static void InitDefaultsscc_info_Sample_MapDataEntry_DoNotUse_Sample_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::Sample::_Sample_MapDataEntry_DoNotUse_default_instance_;
+    new (ptr) ::Sample::Sample_MapDataEntry_DoNotUse();
+  }
+  ::Sample::Sample_MapDataEntry_DoNotUse::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Sample_MapDataEntry_DoNotUse_Sample_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_Sample_MapDataEntry_DoNotUse_Sample_2eproto}, {}};
+
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_Sample_2eproto[2];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_Sample_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_Sample_2eproto = nullptr;
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Sample_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  PROTOBUF_FIELD_OFFSET(::Sample::Sample, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::Sample::Sample_MapDataEntry_DoNotUse, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::Sample::Sample_MapDataEntry_DoNotUse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::Sample::Sample_MapDataEntry_DoNotUse, key_),
+  PROTOBUF_FIELD_OFFSET(::Sample::Sample_MapDataEntry_DoNotUse, value_),
+  0,
+  1,
+  ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::Sample::Sample, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::Sample::Sample, id_),
   PROTOBUF_FIELD_OFFSET(::Sample::Sample, name_),
-  PROTOBUF_FIELD_OFFSET(::Sample::Sample, ip_),
   PROTOBUF_FIELD_OFFSET(::Sample::Sample, addr_list_),
-  1,
-  0,
-  2,
-  ~0u,
+  PROTOBUF_FIELD_OFFSET(::Sample::Sample, map_data_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 9, sizeof(::Sample::Sample)},
+  { 0, 7, sizeof(::Sample::Sample_MapDataEntry_DoNotUse)},
+  { 9, -1, sizeof(::Sample::Sample)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::Sample::_Sample_MapDataEntry_DoNotUse_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::Sample::_Sample_default_instance_),
 };
 
 const char descriptor_table_protodef_Sample_2eproto[] =
-  "\n\014Sample.proto\022\006Sample\"A\n\006Sample\022\n\n\002id\030\001"
-  " \002(\005\022\014\n\004name\030\002 \002(\t\022\n\n\002ip\030\003 \002(\005\022\021\n\taddr_l"
-  "ist\030\004 \003(\005"
+  "\n\014Sample.proto\022\006Sample\"\224\001\n\006Sample\022\n\n\002id\030"
+  "\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\021\n\taddr_list\030\003 \003(\005\022-"
+  "\n\010map_data\030\004 \003(\0132\033.Sample.Sample.MapData"
+  "Entry\032.\n\014MapDataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va"
+  "lue\030\002 \001(\005:\0028\001b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_Sample_2eproto_deps[1] = {
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Sample_2eproto_sccs[1] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Sample_2eproto_sccs[2] = {
   &scc_info_Sample_Sample_2eproto.base,
+  &scc_info_Sample_MapDataEntry_DoNotUse_Sample_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_Sample_2eproto_once;
 static bool descriptor_table_Sample_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Sample_2eproto = {
-  &descriptor_table_Sample_2eproto_initialized, descriptor_table_protodef_Sample_2eproto, "Sample.proto", 89,
-  &descriptor_table_Sample_2eproto_once, descriptor_table_Sample_2eproto_sccs, descriptor_table_Sample_2eproto_deps, 1, 0,
+  &descriptor_table_Sample_2eproto_initialized, descriptor_table_protodef_Sample_2eproto, "Sample.proto", 181,
+  &descriptor_table_Sample_2eproto_once, descriptor_table_Sample_2eproto_sccs, descriptor_table_Sample_2eproto_deps, 2, 0,
   schemas, file_default_instances, TableStruct_Sample_2eproto::offsets,
-  file_level_metadata_Sample_2eproto, 1, file_level_enum_descriptors_Sample_2eproto, file_level_service_descriptors_Sample_2eproto,
+  file_level_metadata_Sample_2eproto, 2, file_level_enum_descriptors_Sample_2eproto, file_level_service_descriptors_Sample_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -87,27 +116,34 @@ namespace Sample {
 
 // ===================================================================
 
+Sample_MapDataEntry_DoNotUse::Sample_MapDataEntry_DoNotUse() {}
+Sample_MapDataEntry_DoNotUse::Sample_MapDataEntry_DoNotUse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+    : SuperType(arena) {}
+void Sample_MapDataEntry_DoNotUse::MergeFrom(const Sample_MapDataEntry_DoNotUse& other) {
+  MergeFromInternal(other);
+}
+::PROTOBUF_NAMESPACE_ID::Metadata Sample_MapDataEntry_DoNotUse::GetMetadata() const {
+  return GetMetadataStatic();
+}
+void Sample_MapDataEntry_DoNotUse::MergeFrom(
+    const ::PROTOBUF_NAMESPACE_ID::Message& other) {
+  ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom(other);
+}
+
+
+// ===================================================================
+
 void Sample::InitAsDefaultInstance() {
 }
 class Sample::HasBitSetters {
  public:
-  using HasBits = decltype(std::declval<Sample>()._has_bits_);
-  static void set_has_id(HasBits* has_bits) {
-    (*has_bits)[0] |= 2u;
-  }
-  static void set_has_name(HasBits* has_bits) {
-    (*has_bits)[0] |= 1u;
-  }
-  static void set_has_ip(HasBits* has_bits) {
-    (*has_bits)[0] |= 4u;
-  }
 };
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Sample::kIdFieldNumber;
 const int Sample::kNameFieldNumber;
-const int Sample::kIpFieldNumber;
 const int Sample::kAddrListFieldNumber;
+const int Sample::kMapDataFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Sample::Sample()
@@ -118,25 +154,21 @@ Sample::Sample()
 Sample::Sample(const Sample& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr),
-      _has_bits_(from._has_bits_),
       addr_list_(from.addr_list_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
+  map_data_.MergeFrom(from.map_data_);
   name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (from.has_name()) {
+  if (from.name().size() > 0) {
     name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.name_);
   }
-  ::memcpy(&id_, &from.id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&ip_) -
-    reinterpret_cast<char*>(&id_)) + sizeof(ip_));
+  id_ = from.id_;
   // @@protoc_insertion_point(copy_constructor:Sample.Sample)
 }
 
 void Sample::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Sample_Sample_2eproto.base);
   name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&ip_) -
-      reinterpret_cast<char*>(&id_)) + sizeof(ip_));
+  id_ = 0;
 }
 
 Sample::~Sample() {
@@ -164,65 +196,60 @@ void Sample::Clear() {
   (void) cached_has_bits;
 
   addr_list_.Clear();
-  cached_has_bits = _has_bits_[0];
-  if (cached_has_bits & 0x00000001u) {
-    name_.ClearNonDefaultToEmptyNoArena();
-  }
-  if (cached_has_bits & 0x00000006u) {
-    ::memset(&id_, 0, static_cast<size_t>(
-        reinterpret_cast<char*>(&ip_) -
-        reinterpret_cast<char*>(&id_)) + sizeof(ip_));
-  }
-  _has_bits_.Clear();
+  map_data_.Clear();
+  name_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  id_ = 0;
   _internal_metadata_.Clear();
 }
 
 #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 const char* Sample::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  HasBitSetters::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
     CHK_(ptr);
     switch (tag >> 3) {
-      // required int32 id = 1;
+      // int32 id = 1;
       case 1: {
         if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) != 8) goto handle_unusual;
-        HasBitSetters::set_has_id(&has_bits);
         id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
         CHK_(ptr);
         break;
       }
-      // required string name = 2;
+      // string name = 2;
       case 2: {
         if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8Verify(mutable_name(), ptr, ctx, "Sample.Sample.name");
+        ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_name(), ptr, ctx, "Sample.Sample.name");
         CHK_(ptr);
         break;
       }
-      // required int32 ip = 3;
+      // repeated int32 addr_list = 3;
       case 3: {
-        if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) != 24) goto handle_unusual;
-        HasBitSetters::set_has_ip(&has_bits);
-        ip_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr);
-        CHK_(ptr);
+        if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedInt32Parser(mutable_addr_list(), ptr, ctx);
+          CHK_(ptr);
+          break;
+        } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) != 24) goto handle_unusual;
+        while (true) {
+          add_addr_list(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr));
+          CHK_(ptr);
+          if (!ctx->DataAvailable(ptr)) break;
+          if (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) != 24) break;
+          ptr += 1;
+        }
         break;
       }
-      // repeated int32 addr_list = 4;
+      // map<string, int32> map_data = 4;
       case 4: {
-        if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32) {
-          while (true) {
-            add_addr_list(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint(&ptr));
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-            if (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) != 32) break;
-            ptr += 1;
-          }
-          break;
-        } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) != 34) goto handle_unusual;
-        ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedInt32Parser(mutable_addr_list(), ptr, ctx);
-        CHK_(ptr);
+        if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) != 34) goto handle_unusual;
+        while (true) {
+          ptr = ctx->ParseMessage(&map_data_, ptr);
+          CHK_(ptr);
+          if (!ctx->DataAvailable(ptr)) break;
+          if (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) != 34) break;
+          ptr += 1;
+        }
         break;
       }
       default: {
@@ -238,7 +265,6 @@ const char* Sample::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::int
     }  // switch
   }  // while
 success:
-  _has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -256,10 +282,10 @@ bool Sample::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // required int32 id = 1;
+      // int32 id = 1;
       case 1: {
         if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (8 & 0xFF)) {
-          HasBitSetters::set_has_id(&_has_bits_);
+
           DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
                    ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
                  input, &id_)));
@@ -269,44 +295,53 @@ bool Sample::MergePartialFromCodedStream(
         break;
       }
 
-      // required string name = 2;
+      // string name = 2;
       case 2: {
         if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
           DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
                 input, this->mutable_name()));
-          ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
             this->name().data(), static_cast<int>(this->name().length()),
-            ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::PARSE,
-            "Sample.Sample.name");
+            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
+            "Sample.Sample.name"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // required int32 ip = 3;
+      // repeated int32 addr_list = 3;
       case 3: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (24 & 0xFF)) {
-          HasBitSetters::set_has_ip(&_has_bits_);
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 input, &ip_)));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // repeated int32 addr_list = 4;
-      case 4: {
-        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (32 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadRepeatedPrimitive<
-                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
-                 1, 32u, input, this->mutable_addr_list())));
-        } else if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
-          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPackedPrimitiveNoInline<
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (26 & 0xFF)) {
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPackedPrimitive<
                    ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
                  input, this->mutable_addr_list())));
+        } else if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (24 & 0xFF)) {
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
+                   ::PROTOBUF_NAMESPACE_ID::int32, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32>(
+                 1, 26u, input, this->mutable_addr_list())));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // map<string, int32> map_data = 4;
+      case 4: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
+          Sample_MapDataEntry_DoNotUse::Parser< ::PROTOBUF_NAMESPACE_ID::internal::MapField<
+              Sample_MapDataEntry_DoNotUse,
+              std::string, ::PROTOBUF_NAMESPACE_ID::int32,
+              ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
+              ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32,
+              0 >,
+            ::PROTOBUF_NAMESPACE_ID::Map< std::string, ::PROTOBUF_NAMESPACE_ID::int32 > > parser(&map_data_);
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessageNoVirtual(
+              input, &parser));
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+            parser.key().data(), static_cast<int>(parser.key().length()),
+            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
+            "Sample.Sample.MapDataEntry.key"));
         } else {
           goto handle_unusual;
         }
@@ -340,31 +375,73 @@ void Sample::SerializeWithCachedSizes(
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
-  // required int32 id = 1;
-  if (cached_has_bits & 0x00000002u) {
+  // int32 id = 1;
+  if (this->id() != 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(1, this->id(), output);
   }
 
-  // required string name = 2;
-  if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+  // string name = 2;
+  if (this->name().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->name().data(), static_cast<int>(this->name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "Sample.Sample.name");
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->name(), output);
   }
 
-  // required int32 ip = 3;
-  if (cached_has_bits & 0x00000004u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(3, this->ip(), output);
+  // repeated int32 addr_list = 3;
+  if (this->addr_list_size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTag(3, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
+    output->WriteVarint32(_addr_list_cached_byte_size_.load(
+        std::memory_order_relaxed));
+  }
+  for (int i = 0, n = this->addr_list_size(); i < n; i++) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32NoTag(
+      this->addr_list(i), output);
   }
 
-  // repeated int32 addr_list = 4;
-  for (int i = 0, n = this->addr_list_size(); i < n; i++) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32(
-      4, this->addr_list(i), output);
+  // map<string, int32> map_data = 4;
+  if (!this->map_data().empty()) {
+    typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, ::PROTOBUF_NAMESPACE_ID::int32 >::const_pointer
+        ConstPtr;
+    typedef ConstPtr SortItem;
+    typedef ::PROTOBUF_NAMESPACE_ID::internal::CompareByDerefFirst<SortItem> Less;
+    struct Utf8Check {
+      static void Check(ConstPtr p) {
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+          p->first.data(), static_cast<int>(p->first.length()),
+          ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+          "Sample.Sample.MapDataEntry.key");
+      }
+    };
+
+    if (output->IsSerializationDeterministic() &&
+        this->map_data().size() > 1) {
+      ::std::unique_ptr<SortItem[]> items(
+          new SortItem[this->map_data().size()]);
+      typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, ::PROTOBUF_NAMESPACE_ID::int32 >::size_type size_type;
+      size_type n = 0;
+      for (::PROTOBUF_NAMESPACE_ID::Map< std::string, ::PROTOBUF_NAMESPACE_ID::int32 >::const_iterator
+          it = this->map_data().begin();
+          it != this->map_data().end(); ++it, ++n) {
+        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
+      }
+      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
+      for (size_type i = 0; i < n; i++) {
+        Sample_MapDataEntry_DoNotUse::MapEntryWrapper entry(nullptr, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second);
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(4, entry, output);
+        Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
+      }
+    } else {
+      for (::PROTOBUF_NAMESPACE_ID::Map< std::string, ::PROTOBUF_NAMESPACE_ID::int32 >::const_iterator
+          it = this->map_data().begin();
+          it != this->map_data().end(); ++it) {
+        Sample_MapDataEntry_DoNotUse::MapEntryWrapper entry(nullptr, it->first, it->second);
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(4, entry, output);
+        Utf8Check::Check(&(*it));
+      }
+    }
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -380,31 +457,77 @@ void Sample::SerializeWithCachedSizes(
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  cached_has_bits = _has_bits_[0];
-  // required int32 id = 1;
-  if (cached_has_bits & 0x00000002u) {
+  // int32 id = 1;
+  if (this->id() != 0) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->id(), target);
   }
 
-  // required string name = 2;
-  if (cached_has_bits & 0x00000001u) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::VerifyUTF8StringNamedField(
+  // string name = 2;
+  if (this->name().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->name().data(), static_cast<int>(this->name().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SERIALIZE,
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "Sample.Sample.name");
     target =
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
         2, this->name(), target);
   }
 
-  // required int32 ip = 3;
-  if (cached_has_bits & 0x00000004u) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->ip(), target);
+  // repeated int32 addr_list = 3;
+  if (this->addr_list_size() > 0) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteTagToArray(
+      3,
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
+      target);
+    target = ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream::WriteVarint32ToArray(
+        _addr_list_cached_byte_size_.load(std::memory_order_relaxed),
+         target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      WriteInt32NoTagToArray(this->addr_list_, target);
   }
 
-  // repeated int32 addr_list = 4;
-  target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-    WriteInt32ToArray(4, this->addr_list_, target);
+  // map<string, int32> map_data = 4;
+  if (!this->map_data().empty()) {
+    typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, ::PROTOBUF_NAMESPACE_ID::int32 >::const_pointer
+        ConstPtr;
+    typedef ConstPtr SortItem;
+    typedef ::PROTOBUF_NAMESPACE_ID::internal::CompareByDerefFirst<SortItem> Less;
+    struct Utf8Check {
+      static void Check(ConstPtr p) {
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+          p->first.data(), static_cast<int>(p->first.length()),
+          ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+          "Sample.Sample.MapDataEntry.key");
+      }
+    };
+
+    if (false &&
+        this->map_data().size() > 1) {
+      ::std::unique_ptr<SortItem[]> items(
+          new SortItem[this->map_data().size()]);
+      typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, ::PROTOBUF_NAMESPACE_ID::int32 >::size_type size_type;
+      size_type n = 0;
+      for (::PROTOBUF_NAMESPACE_ID::Map< std::string, ::PROTOBUF_NAMESPACE_ID::int32 >::const_iterator
+          it = this->map_data().begin();
+          it != this->map_data().end(); ++it, ++n) {
+        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
+      }
+      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
+      for (size_type i = 0; i < n; i++) {
+        Sample_MapDataEntry_DoNotUse::MapEntryWrapper entry(nullptr, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second);
+        target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::InternalWriteMessageNoVirtualToArray(4, entry, target);
+        Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
+      }
+    } else {
+      for (::PROTOBUF_NAMESPACE_ID::Map< std::string, ::PROTOBUF_NAMESPACE_ID::int32 >::const_iterator
+          it = this->map_data().begin();
+          it != this->map_data().end(); ++it) {
+        Sample_MapDataEntry_DoNotUse::MapEntryWrapper entry(nullptr, it->first, it->second);
+        target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::InternalWriteMessageNoVirtualToArray(4, entry, target);
+        Utf8Check::Check(&(*it));
+      }
+    }
+  }
 
   if (_internal_metadata_.have_unknown_fields()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
@@ -414,33 +537,6 @@ void Sample::SerializeWithCachedSizes(
   return target;
 }
 
-size_t Sample::RequiredFieldsByteSizeFallback() const {
-// @@protoc_insertion_point(required_fields_byte_size_fallback_start:Sample.Sample)
-  size_t total_size = 0;
-
-  if (has_name()) {
-    // required string name = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->name());
-  }
-
-  if (has_id()) {
-    // required int32 id = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->id());
-  }
-
-  if (has_ip()) {
-    // required int32 ip = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->ip());
-  }
-
-  return total_size;
-}
 size_t Sample::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:Sample.Sample)
   size_t total_size = 0;
@@ -450,36 +546,48 @@ size_t Sample::ByteSizeLong() const {
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
         _internal_metadata_.unknown_fields());
   }
-  if (((_has_bits_[0] & 0x00000007) ^ 0x00000007) == 0) {  // All required fields are present.
-    // required string name = 2;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->name());
-
-    // required int32 id = 1;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->id());
-
-    // required int32 ip = 3;
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->ip());
-
-  } else {
-    total_size += RequiredFieldsByteSizeFallback();
-  }
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated int32 addr_list = 4;
+  // repeated int32 addr_list = 3;
   {
     size_t data_size = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       Int32Size(this->addr_list_);
-    total_size += 1 *
-                  ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->addr_list_size());
+    if (data_size > 0) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+            static_cast<::PROTOBUF_NAMESPACE_ID::int32>(data_size));
+    }
+    int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(data_size);
+    _addr_list_cached_byte_size_.store(cached_size,
+                                    std::memory_order_relaxed);
     total_size += data_size;
+  }
+
+  // map<string, int32> map_data = 4;
+  total_size += 1 *
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->map_data_size());
+  for (::PROTOBUF_NAMESPACE_ID::Map< std::string, ::PROTOBUF_NAMESPACE_ID::int32 >::const_iterator
+      it = this->map_data().begin();
+      it != this->map_data().end(); ++it) {
+    Sample_MapDataEntry_DoNotUse::MapEntryWrapper entry(nullptr, it->first, it->second);
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+        MessageSizeNoVirtual(entry);
+  }
+
+  // string name = 2;
+  if (this->name().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->name());
+  }
+
+  // int32 id = 1;
+  if (this->id() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+        this->id());
   }
 
   int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
@@ -510,19 +618,13 @@ void Sample::MergeFrom(const Sample& from) {
   (void) cached_has_bits;
 
   addr_list_.MergeFrom(from.addr_list_);
-  cached_has_bits = from._has_bits_[0];
-  if (cached_has_bits & 0x00000007u) {
-    if (cached_has_bits & 0x00000001u) {
-      _has_bits_[0] |= 0x00000001u;
-      name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.name_);
-    }
-    if (cached_has_bits & 0x00000002u) {
-      id_ = from.id_;
-    }
-    if (cached_has_bits & 0x00000004u) {
-      ip_ = from.ip_;
-    }
-    _has_bits_[0] |= cached_has_bits;
+  map_data_.MergeFrom(from.map_data_);
+  if (from.name().size() > 0) {
+
+    name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.name_);
+  }
+  if (from.id() != 0) {
+    set_id(from.id());
   }
 }
 
@@ -541,7 +643,6 @@ void Sample::CopyFrom(const Sample& from) {
 }
 
 bool Sample::IsInitialized() const {
-  if ((_has_bits_[0] & 0x00000007) != 0x00000007) return false;
   return true;
 }
 
@@ -552,12 +653,11 @@ void Sample::Swap(Sample* other) {
 void Sample::InternalSwap(Sample* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  swap(_has_bits_[0], other->_has_bits_[0]);
   addr_list_.InternalSwap(&other->addr_list_);
+  map_data_.Swap(&other->map_data_);
   name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   swap(id_, other->id_);
-  swap(ip_, other->ip_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata Sample::GetMetadata() const {
@@ -568,6 +668,9 @@ void Sample::InternalSwap(Sample* other) {
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace Sample
 PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::Sample::Sample_MapDataEntry_DoNotUse* Arena::CreateMaybeMessage< ::Sample::Sample_MapDataEntry_DoNotUse >(Arena* arena) {
+  return Arena::CreateInternal< ::Sample::Sample_MapDataEntry_DoNotUse >(arena);
+}
 template<> PROTOBUF_NOINLINE ::Sample::Sample* Arena::CreateMaybeMessage< ::Sample::Sample >(Arena* arena) {
   return Arena::CreateInternal< ::Sample::Sample >(arena);
 }

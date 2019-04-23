@@ -11,10 +11,12 @@
 #include <unistd.h>
 #include <fcntl.h>
 
+using namespace std;
 
 int main()
 {
-    int fd, size;
+    int fd = 0;
+    int size = 0;
     char buf[1024];
 
     fd = open("buf", O_RDONLY);
@@ -30,7 +32,7 @@ int main()
             std::cout << "failed to read" << std::endl;
             return -1;
         } else if (rlen == 0) {
-            std::cout << "fin" << std::endl;
+            std::cout << "exit" << std::endl;
             break;
         }
 
@@ -46,9 +48,19 @@ int main()
             return -1;
         }
 
-        //std::cout << "sample=id:" << sample.id() << ", name:"
-            //<< sample.name().c_str() << ", ip:" << sample.ip()
-            //<< ", addr size:" << sample.addr_list_size() << std::endl;
+        std::cout << "sample=id:" << sample.id() << ", name:"
+            << sample.name().c_str() <<", addr size:"
+                  << sample.addr_list_size() << std::endl;
+        auto data = sample.map_data();
+        cout << sample.map_data_size() << ", " << data["test"]<< endl;
+        int isize = sample.addr_list_size();
+        for( int i = 0; i < isize; ++i )
+        {
+            std::cout << sample.addr_list(i) << ", ";
+        }
+        std::cout<<std::endl;
+
+
     }
 
     return 0;

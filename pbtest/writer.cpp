@@ -12,13 +12,14 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <stdlib.h>
+using namespace std;
 
 int main(int argc, char* argv[])
 {
     int fd, count;
     char buf[1024];
 
-    count = atoi(argv[1]);
+    count = 10;
     std::cout << "count: " << count << std::endl;
 
     fd = open("buf", O_RDWR | O_CREAT, 0644);
@@ -30,12 +31,23 @@ int main(int argc, char* argv[])
     Sample::Sample sample;
     for (int i = 0; i < count; i++) {
         sample.set_id(i);
-        sample.set_ip(i + 100);
         sample.set_name("kobe");
         sample.clear_addr_list();
-        for (int j = i; j < i + 100; j++) {
+        for (int j = i; j < i + 20; j++) {
             sample.add_addr_list(j);
         }
+
+        auto map = sample.mutable_map_data();
+        (*map)["test"] = i;
+        (*map)["1"] = i + 1;
+
+//        auto data = sample.map_data();
+//        string key = "test";
+//        sample.map_data()["test"] = 2;
+//        sample.map_data().insert(pair<string, int>("test", 1));
+//        data[key] = 2;
+//        sample.data().insert(pair<std::string, int>("test", 1>);
+
 
         int size = sample.ByteSize();
         int nwritten = write(fd, &size, sizeof(size));

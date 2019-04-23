@@ -40,6 +40,9 @@ int main(int argc, char* argv[])
         auto map = sample.mutable_map_data();
         (*map)["test"] = i;
         (*map)["1"] = i + 1;
+        
+        auto &mmap = *sample.mutable_map_data();
+        mmap["2"] = i + 2;
 
 //        auto data = sample.map_data();
 //        string key = "test";

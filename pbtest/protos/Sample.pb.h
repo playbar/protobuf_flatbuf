@@ -50,7 +50,7 @@ struct TableStruct_Sample_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[2]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[3]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -58,6 +58,9 @@ struct TableStruct_Sample_2eproto {
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Sample_2eproto;
 namespace Sample {
+class Color;
+class ColorDefaultTypeInternal;
+extern ColorDefaultTypeInternal _Color_default_instance_;
 class Sample;
 class SampleDefaultTypeInternal;
 extern SampleDefaultTypeInternal _Sample_default_instance_;
@@ -66,12 +69,160 @@ class Sample_MapDataEntry_DoNotUseDefaultTypeInternal;
 extern Sample_MapDataEntry_DoNotUseDefaultTypeInternal _Sample_MapDataEntry_DoNotUse_default_instance_;
 }  // namespace Sample
 PROTOBUF_NAMESPACE_OPEN
+template<> ::Sample::Color* Arena::CreateMaybeMessage<::Sample::Color>(Arena*);
 template<> ::Sample::Sample* Arena::CreateMaybeMessage<::Sample::Sample>(Arena*);
 template<> ::Sample::Sample_MapDataEntry_DoNotUse* Arena::CreateMaybeMessage<::Sample::Sample_MapDataEntry_DoNotUse>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace Sample {
 
 // ===================================================================
+
+class Color :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Sample.Color) */ {
+ public:
+  Color();
+  virtual ~Color();
+
+  Color(const Color& from);
+  Color(Color&& from) noexcept
+    : Color() {
+    *this = ::std::move(from);
+  }
+
+  inline Color& operator=(const Color& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline Color& operator=(Color&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const Color& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const Color* internal_default_instance() {
+    return reinterpret_cast<const Color*>(
+               &_Color_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    0;
+
+  void Swap(Color* other);
+  friend void swap(Color& a, Color& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline Color* New() const final {
+    return CreateMaybeMessage<Color>(nullptr);
+  }
+
+  Color* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<Color>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const Color& from);
+  void MergeFrom(const Color& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* InternalSerializeWithCachedSizesToArray(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(Color* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "Sample.Color";
+  }
+  private:
+  inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Sample_2eproto);
+    return ::descriptor_table_Sample_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // float r = 1;
+  void clear_r();
+  static const int kRFieldNumber = 1;
+  float r() const;
+  void set_r(float value);
+
+  // float g = 2;
+  void clear_g();
+  static const int kGFieldNumber = 2;
+  float g() const;
+  void set_g(float value);
+
+  // float b = 3;
+  void clear_b();
+  static const int kBFieldNumber = 3;
+  float b() const;
+  void set_b(float value);
+
+  // float a = 4;
+  void clear_a();
+  static const int kAFieldNumber = 4;
+  float a() const;
+  void set_a(float value);
+
+  // @@protoc_insertion_point(class_scope:Sample.Color)
+ private:
+  class HasBitSetters;
+
+  ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
+  float r_;
+  float g_;
+  float b_;
+  float a_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_Sample_2eproto;
+};
+// -------------------------------------------------------------------
 
 class Sample_MapDataEntry_DoNotUse : public ::PROTOBUF_NAMESPACE_ID::internal::MapEntry<Sample_MapDataEntry_DoNotUse, 
     std::string, ::PROTOBUF_NAMESPACE_ID::int32,
@@ -97,7 +248,7 @@ public:
   private:
   static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
     ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_Sample_2eproto);
-    return ::descriptor_table_Sample_2eproto.file_level_metadata[0];
+    return ::descriptor_table_Sample_2eproto.file_level_metadata[1];
   }
 
   public:
@@ -147,7 +298,7 @@ class Sample :
                &_Sample_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    1;
+    2;
 
   void Swap(Sample* other);
   friend void swap(Sample& a, Sample& b) {
@@ -227,10 +378,10 @@ class Sample :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::int32 >*
       mutable_addr_list();
 
-  // map<string, int32> map_data = 4;
+  // map<string, int32> map_data = 5;
   int map_data_size() const;
   void clear_map_data();
-  static const int kMapDataFieldNumber = 4;
+  static const int kMapDataFieldNumber = 5;
   const ::PROTOBUF_NAMESPACE_ID::Map< std::string, ::PROTOBUF_NAMESPACE_ID::int32 >&
       map_data() const;
   ::PROTOBUF_NAMESPACE_ID::Map< std::string, ::PROTOBUF_NAMESPACE_ID::int32 >*
@@ -247,6 +398,15 @@ class Sample :
   std::string* mutable_name();
   std::string* release_name();
   void set_allocated_name(std::string* name);
+
+  // .Sample.Color color = 4;
+  bool has_color() const;
+  void clear_color();
+  static const int kColorFieldNumber = 4;
+  const ::Sample::Color& color() const;
+  ::Sample::Color* release_color();
+  ::Sample::Color* mutable_color();
+  void set_allocated_color(::Sample::Color* color);
 
   // int32 id = 1;
   void clear_id();
@@ -268,6 +428,7 @@ class Sample :
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32,
       0 > map_data_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
+  ::Sample::Color* color_;
   ::PROTOBUF_NAMESPACE_ID::int32 id_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_Sample_2eproto;
@@ -281,6 +442,66 @@ class Sample :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
+// Color
+
+// float r = 1;
+inline void Color::clear_r() {
+  r_ = 0;
+}
+inline float Color::r() const {
+  // @@protoc_insertion_point(field_get:Sample.Color.r)
+  return r_;
+}
+inline void Color::set_r(float value) {
+  
+  r_ = value;
+  // @@protoc_insertion_point(field_set:Sample.Color.r)
+}
+
+// float g = 2;
+inline void Color::clear_g() {
+  g_ = 0;
+}
+inline float Color::g() const {
+  // @@protoc_insertion_point(field_get:Sample.Color.g)
+  return g_;
+}
+inline void Color::set_g(float value) {
+  
+  g_ = value;
+  // @@protoc_insertion_point(field_set:Sample.Color.g)
+}
+
+// float b = 3;
+inline void Color::clear_b() {
+  b_ = 0;
+}
+inline float Color::b() const {
+  // @@protoc_insertion_point(field_get:Sample.Color.b)
+  return b_;
+}
+inline void Color::set_b(float value) {
+  
+  b_ = value;
+  // @@protoc_insertion_point(field_set:Sample.Color.b)
+}
+
+// float a = 4;
+inline void Color::clear_a() {
+  a_ = 0;
+}
+inline float Color::a() const {
+  // @@protoc_insertion_point(field_get:Sample.Color.a)
+  return a_;
+}
+inline void Color::set_a(float value) {
+  
+  a_ = value;
+  // @@protoc_insertion_point(field_set:Sample.Color.a)
+}
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // Sample
@@ -380,7 +601,58 @@ Sample::mutable_addr_list() {
   return &addr_list_;
 }
 
-// map<string, int32> map_data = 4;
+// .Sample.Color color = 4;
+inline bool Sample::has_color() const {
+  return this != internal_default_instance() && color_ != nullptr;
+}
+inline void Sample::clear_color() {
+  if (GetArenaNoVirtual() == nullptr && color_ != nullptr) {
+    delete color_;
+  }
+  color_ = nullptr;
+}
+inline const ::Sample::Color& Sample::color() const {
+  const ::Sample::Color* p = color_;
+  // @@protoc_insertion_point(field_get:Sample.Sample.color)
+  return p != nullptr ? *p : *reinterpret_cast<const ::Sample::Color*>(
+      &::Sample::_Color_default_instance_);
+}
+inline ::Sample::Color* Sample::release_color() {
+  // @@protoc_insertion_point(field_release:Sample.Sample.color)
+  
+  ::Sample::Color* temp = color_;
+  color_ = nullptr;
+  return temp;
+}
+inline ::Sample::Color* Sample::mutable_color() {
+  
+  if (color_ == nullptr) {
+    auto* p = CreateMaybeMessage<::Sample::Color>(GetArenaNoVirtual());
+    color_ = p;
+  }
+  // @@protoc_insertion_point(field_mutable:Sample.Sample.color)
+  return color_;
+}
+inline void Sample::set_allocated_color(::Sample::Color* color) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == nullptr) {
+    delete color_;
+  }
+  if (color) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena = nullptr;
+    if (message_arena != submessage_arena) {
+      color = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, color, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  color_ = color;
+  // @@protoc_insertion_point(field_set_allocated:Sample.Sample.color)
+}
+
+// map<string, int32> map_data = 5;
 inline int Sample::map_data_size() const {
   return map_data_.size();
 }
@@ -401,6 +673,8 @@ Sample::mutable_map_data() {
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 

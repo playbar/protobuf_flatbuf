@@ -37,10 +37,16 @@ int main(int argc, char* argv[])
             sample.add_addr_list(j);
         }
 
+        auto color = sample.mutable_color();
+        color->set_a(1.2f);
+        color->set_g(1.4f);
+        color->set_b(1.6f);
+        color->set_a(1.8f);
+
         auto map = sample.mutable_map_data();
         (*map)["test"] = i;
         (*map)["1"] = i + 1;
-        
+
         auto &mmap = *sample.mutable_map_data();
         mmap["2"] = i + 2;
 

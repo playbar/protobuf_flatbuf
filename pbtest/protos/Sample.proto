@@ -3,9 +3,18 @@ syntax = "proto3";
 
 package Sample;
 
+message Color
+{
+    float r = 1;
+    float g = 2;
+    float b = 3;
+    float a = 4;
+}
+
 message Sample {
     int32 id = 1;
     string name = 2;
     repeated int32 addr_list = 3;
-    map<string, int32> map_data = 4;
+    Color    color = 4;
+    map<string, int32> map_data = 5;
 }

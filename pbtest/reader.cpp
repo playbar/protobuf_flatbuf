@@ -49,8 +49,11 @@ int main()
         }
 
         std::cout << "sample=id:" << sample.id() << ", name:"
-            << sample.name().c_str() <<", addr size:"
-                  << sample.addr_list_size() << std::endl;
+            << sample.name().c_str() <<", addr size:" << sample.addr_list_size() << std::endl;
+
+        cout<<"color, a = "<< sample.color().a() << ", g = " << sample.color().g() << endl;
+
+
         auto data = sample.map_data();
         cout << sample.map_data_size() << ", " << data["test"]<< endl;
         int isize = sample.addr_list_size();

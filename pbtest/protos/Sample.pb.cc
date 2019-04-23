@@ -15,8 +15,13 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+extern PROTOBUF_INTERNAL_EXPORT_Sample_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Color_Sample_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_Sample_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Sample_MapDataEntry_DoNotUse_Sample_2eproto;
 namespace Sample {
+class ColorDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Color> _instance;
+} _Color_default_instance_;
 class Sample_MapDataEntry_DoNotUseDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Sample_MapDataEntry_DoNotUse> _instance;
@@ -26,6 +31,20 @@ class SampleDefaultTypeInternal {
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Sample> _instance;
 } _Sample_default_instance_;
 }  // namespace Sample
+static void InitDefaultsscc_info_Color_Sample_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::Sample::_Color_default_instance_;
+    new (ptr) ::Sample::Color();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::Sample::Color::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Color_Sample_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_Color_Sample_2eproto}, {}};
+
 static void InitDefaultsscc_info_Sample_Sample_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -37,8 +56,9 @@ static void InitDefaultsscc_info_Sample_Sample_2eproto() {
   ::Sample::Sample::InitAsDefaultInstance();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Sample_Sample_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_Sample_Sample_2eproto}, {
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_Sample_Sample_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_Sample_Sample_2eproto}, {
+      &scc_info_Color_Sample_2eproto.base,
       &scc_info_Sample_MapDataEntry_DoNotUse_Sample_2eproto.base,}};
 
 static void InitDefaultsscc_info_Sample_MapDataEntry_DoNotUse_Sample_2eproto() {
@@ -54,11 +74,20 @@ static void InitDefaultsscc_info_Sample_MapDataEntry_DoNotUse_Sample_2eproto() {
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Sample_MapDataEntry_DoNotUse_Sample_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_Sample_MapDataEntry_DoNotUse_Sample_2eproto}, {}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_Sample_2eproto[2];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_Sample_2eproto[3];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_Sample_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_Sample_2eproto = nullptr;
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Sample_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::Sample::Color, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::Sample::Color, r_),
+  PROTOBUF_FIELD_OFFSET(::Sample::Color, g_),
+  PROTOBUF_FIELD_OFFSET(::Sample::Color, b_),
+  PROTOBUF_FIELD_OFFSET(::Sample::Color, a_),
   PROTOBUF_FIELD_OFFSET(::Sample::Sample_MapDataEntry_DoNotUse, _has_bits_),
   PROTOBUF_FIELD_OFFSET(::Sample::Sample_MapDataEntry_DoNotUse, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -76,43 +105,430 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_Sample_2eproto::offsets[] PROT
   PROTOBUF_FIELD_OFFSET(::Sample::Sample, id_),
   PROTOBUF_FIELD_OFFSET(::Sample::Sample, name_),
   PROTOBUF_FIELD_OFFSET(::Sample::Sample, addr_list_),
+  PROTOBUF_FIELD_OFFSET(::Sample::Sample, color_),
   PROTOBUF_FIELD_OFFSET(::Sample::Sample, map_data_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 7, sizeof(::Sample::Sample_MapDataEntry_DoNotUse)},
-  { 9, -1, sizeof(::Sample::Sample)},
+  { 0, -1, sizeof(::Sample::Color)},
+  { 9, 16, sizeof(::Sample::Sample_MapDataEntry_DoNotUse)},
+  { 18, -1, sizeof(::Sample::Sample)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::Sample::_Color_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::Sample::_Sample_MapDataEntry_DoNotUse_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::Sample::_Sample_default_instance_),
 };
 
 const char descriptor_table_protodef_Sample_2eproto[] =
-  "\n\014Sample.proto\022\006Sample\"\224\001\n\006Sample\022\n\n\002id\030"
-  "\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\021\n\taddr_list\030\003 \003(\005\022-"
-  "\n\010map_data\030\004 \003(\0132\033.Sample.Sample.MapData"
-  "Entry\032.\n\014MapDataEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005va"
-  "lue\030\002 \001(\005:\0028\001b\006proto3"
+  "\n\014Sample.proto\022\006Sample\"3\n\005Color\022\t\n\001r\030\001 \001"
+  "(\002\022\t\n\001g\030\002 \001(\002\022\t\n\001b\030\003 \001(\002\022\t\n\001a\030\004 \001(\002\"\262\001\n\006"
+  "Sample\022\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\021\n\taddr"
+  "_list\030\003 \003(\005\022\034\n\005color\030\004 \001(\0132\r.Sample.Colo"
+  "r\022-\n\010map_data\030\005 \003(\0132\033.Sample.Sample.MapD"
+  "ataEntry\032.\n\014MapDataEntry\022\013\n\003key\030\001 \001(\t\022\r\n"
+  "\005value\030\002 \001(\005:\0028\001b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_Sample_2eproto_deps[1] = {
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Sample_2eproto_sccs[2] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_Sample_2eproto_sccs[3] = {
+  &scc_info_Color_Sample_2eproto.base,
   &scc_info_Sample_Sample_2eproto.base,
   &scc_info_Sample_MapDataEntry_DoNotUse_Sample_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_Sample_2eproto_once;
 static bool descriptor_table_Sample_2eproto_initialized = false;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Sample_2eproto = {
-  &descriptor_table_Sample_2eproto_initialized, descriptor_table_protodef_Sample_2eproto, "Sample.proto", 181,
-  &descriptor_table_Sample_2eproto_once, descriptor_table_Sample_2eproto_sccs, descriptor_table_Sample_2eproto_deps, 2, 0,
+  &descriptor_table_Sample_2eproto_initialized, descriptor_table_protodef_Sample_2eproto, "Sample.proto", 264,
+  &descriptor_table_Sample_2eproto_once, descriptor_table_Sample_2eproto_sccs, descriptor_table_Sample_2eproto_deps, 3, 0,
   schemas, file_default_instances, TableStruct_Sample_2eproto::offsets,
-  file_level_metadata_Sample_2eproto, 2, file_level_enum_descriptors_Sample_2eproto, file_level_service_descriptors_Sample_2eproto,
+  file_level_metadata_Sample_2eproto, 3, file_level_enum_descriptors_Sample_2eproto, file_level_service_descriptors_Sample_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
 static bool dynamic_init_dummy_Sample_2eproto = (  ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_Sample_2eproto), true);
 namespace Sample {
+
+// ===================================================================
+
+void Color::InitAsDefaultInstance() {
+}
+class Color::HasBitSetters {
+ public:
+};
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int Color::kRFieldNumber;
+const int Color::kGFieldNumber;
+const int Color::kBFieldNumber;
+const int Color::kAFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+Color::Color()
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:Sample.Color)
+}
+Color::Color(const Color& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::memcpy(&r_, &from.r_,
+    static_cast<size_t>(reinterpret_cast<char*>(&a_) -
+    reinterpret_cast<char*>(&r_)) + sizeof(a_));
+  // @@protoc_insertion_point(copy_constructor:Sample.Color)
+}
+
+void Color::SharedCtor() {
+  ::memset(&r_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&a_) -
+      reinterpret_cast<char*>(&r_)) + sizeof(a_));
+}
+
+Color::~Color() {
+  // @@protoc_insertion_point(destructor:Sample.Color)
+  SharedDtor();
+}
+
+void Color::SharedDtor() {
+}
+
+void Color::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const Color& Color::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Color_Sample_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void Color::Clear() {
+// @@protoc_insertion_point(message_clear_start:Sample.Color)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  ::memset(&r_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&a_) -
+      reinterpret_cast<char*>(&r_)) + sizeof(a_));
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* Color::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // float r = 1;
+      case 1: {
+        if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) != 13) goto handle_unusual;
+        r_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+        ptr += sizeof(float);
+        break;
+      }
+      // float g = 2;
+      case 2: {
+        if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) != 21) goto handle_unusual;
+        g_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+        ptr += sizeof(float);
+        break;
+      }
+      // float b = 3;
+      case 3: {
+        if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) != 29) goto handle_unusual;
+        b_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+        ptr += sizeof(float);
+        break;
+      }
+      // float a = 4;
+      case 4: {
+        if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) != 37) goto handle_unusual;
+        a_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+        ptr += sizeof(float);
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        break;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool Color::MergePartialFromCodedStream(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+  // @@protoc_insertion_point(parse_start:Sample.Color)
+  for (;;) {
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // float r = 1;
+      case 1: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (13 & 0xFF)) {
+
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
+                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &r_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // float g = 2;
+      case 2: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (21 & 0xFF)) {
+
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
+                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &g_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // float b = 3;
+      case 3: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (29 & 0xFF)) {
+
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
+                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &b_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // float a = 4;
+      case 4: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (37 & 0xFF)) {
+
+          DO_((::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadPrimitive<
+                   float, ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_FLOAT>(
+                 input, &a_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:Sample.Color)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:Sample.Color)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void Color::SerializeWithCachedSizes(
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:Sample.Color)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // float r = 1;
+  if (!(this->r() <= 0 && this->r() >= 0)) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(1, this->r(), output);
+  }
+
+  // float g = 2;
+  if (!(this->g() <= 0 && this->g() >= 0)) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(2, this->g(), output);
+  }
+
+  // float b = 3;
+  if (!(this->b() <= 0 && this->b() >= 0)) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(3, this->b(), output);
+  }
+
+  // float a = 4;
+  if (!(this->a() <= 0 && this->a() >= 0)) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloat(4, this->a(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:Sample.Color)
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* Color::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:Sample.Color)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // float r = 1;
+  if (!(this->r() <= 0 && this->r() >= 0)) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(1, this->r(), target);
+  }
+
+  // float g = 2;
+  if (!(this->g() <= 0 && this->g() >= 0)) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(2, this->g(), target);
+  }
+
+  // float b = 3;
+  if (!(this->b() <= 0 && this->b() >= 0)) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(3, this->b(), target);
+  }
+
+  // float a = 4;
+  if (!(this->a() <= 0 && this->a() >= 0)) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(4, this->a(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:Sample.Color)
+  return target;
+}
+
+size_t Color::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Sample.Color)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // float r = 1;
+  if (!(this->r() <= 0 && this->r() >= 0)) {
+    total_size += 1 + 4;
+  }
+
+  // float g = 2;
+  if (!(this->g() <= 0 && this->g() >= 0)) {
+    total_size += 1 + 4;
+  }
+
+  // float b = 3;
+  if (!(this->b() <= 0 && this->b() >= 0)) {
+    total_size += 1 + 4;
+  }
+
+  // float a = 4;
+  if (!(this->a() <= 0 && this->a() >= 0)) {
+    total_size += 1 + 4;
+  }
+
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void Color::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:Sample.Color)
+  GOOGLE_DCHECK_NE(&from, this);
+  const Color* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<Color>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Sample.Color)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Sample.Color)
+    MergeFrom(*source);
+  }
+}
+
+void Color::MergeFrom(const Color& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:Sample.Color)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (!(from.r() <= 0 && from.r() >= 0)) {
+    set_r(from.r());
+  }
+  if (!(from.g() <= 0 && from.g() >= 0)) {
+    set_g(from.g());
+  }
+  if (!(from.b() <= 0 && from.b() >= 0)) {
+    set_b(from.b());
+  }
+  if (!(from.a() <= 0 && from.a() >= 0)) {
+    set_a(from.a());
+  }
+}
+
+void Color::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Sample.Color)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void Color::CopyFrom(const Color& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Sample.Color)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool Color::IsInitialized() const {
+  return true;
+}
+
+void Color::Swap(Color* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void Color::InternalSwap(Color* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(r_, other->r_);
+  swap(g_, other->g_);
+  swap(b_, other->b_);
+  swap(a_, other->a_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata Color::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
 
 // ===================================================================
 
@@ -134,15 +550,23 @@ void Sample_MapDataEntry_DoNotUse::MergeFrom(
 // ===================================================================
 
 void Sample::InitAsDefaultInstance() {
+  ::Sample::_Sample_default_instance_._instance.get_mutable()->color_ = const_cast< ::Sample::Color*>(
+      ::Sample::Color::internal_default_instance());
 }
 class Sample::HasBitSetters {
  public:
+  static const ::Sample::Color& color(const Sample* msg);
 };
 
+const ::Sample::Color&
+Sample::HasBitSetters::color(const Sample* msg) {
+  return *msg->color_;
+}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Sample::kIdFieldNumber;
 const int Sample::kNameFieldNumber;
 const int Sample::kAddrListFieldNumber;
+const int Sample::kColorFieldNumber;
 const int Sample::kMapDataFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
@@ -161,6 +585,11 @@ Sample::Sample(const Sample& from)
   if (from.name().size() > 0) {
     name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.name_);
   }
+  if (from.has_color()) {
+    color_ = new ::Sample::Color(*from.color_);
+  } else {
+    color_ = nullptr;
+  }
   id_ = from.id_;
   // @@protoc_insertion_point(copy_constructor:Sample.Sample)
 }
@@ -168,7 +597,9 @@ Sample::Sample(const Sample& from)
 void Sample::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Sample_Sample_2eproto.base);
   name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  id_ = 0;
+  ::memset(&color_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&id_) -
+      reinterpret_cast<char*>(&color_)) + sizeof(id_));
 }
 
 Sample::~Sample() {
@@ -178,6 +609,7 @@ Sample::~Sample() {
 
 void Sample::SharedDtor() {
   name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete color_;
 }
 
 void Sample::SetCachedSize(int size) const {
@@ -198,6 +630,10 @@ void Sample::Clear() {
   addr_list_.Clear();
   map_data_.Clear();
   name_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (GetArenaNoVirtual() == nullptr && color_ != nullptr) {
+    delete color_;
+  }
+  color_ = nullptr;
   id_ = 0;
   _internal_metadata_.Clear();
 }
@@ -240,14 +676,21 @@ const char* Sample::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::int
         }
         break;
       }
-      // map<string, int32> map_data = 4;
+      // .Sample.Color color = 4;
       case 4: {
         if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) != 34) goto handle_unusual;
+        ptr = ctx->ParseMessage(mutable_color(), ptr);
+        CHK_(ptr);
+        break;
+      }
+      // map<string, int32> map_data = 5;
+      case 5: {
+        if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) != 42) goto handle_unusual;
         while (true) {
           ptr = ctx->ParseMessage(&map_data_, ptr);
           CHK_(ptr);
           if (!ctx->DataAvailable(ptr)) break;
-          if (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) != 34) break;
+          if (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) != 42) break;
           ptr += 1;
         }
         break;
@@ -326,9 +769,20 @@ bool Sample::MergePartialFromCodedStream(
         break;
       }
 
-      // map<string, int32> map_data = 4;
+      // .Sample.Color color = 4;
       case 4: {
         if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (34 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
+               input, mutable_color()));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // map<string, int32> map_data = 5;
+      case 5: {
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (42 & 0xFF)) {
           Sample_MapDataEntry_DoNotUse::Parser< ::PROTOBUF_NAMESPACE_ID::internal::MapField<
               Sample_MapDataEntry_DoNotUse,
               std::string, ::PROTOBUF_NAMESPACE_ID::int32,
@@ -401,7 +855,13 @@ void Sample::SerializeWithCachedSizes(
       this->addr_list(i), output);
   }
 
-  // map<string, int32> map_data = 4;
+  // .Sample.Color color = 4;
+  if (this->has_color()) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
+      4, HasBitSetters::color(this), output);
+  }
+
+  // map<string, int32> map_data = 5;
   if (!this->map_data().empty()) {
     typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, ::PROTOBUF_NAMESPACE_ID::int32 >::const_pointer
         ConstPtr;
@@ -430,7 +890,7 @@ void Sample::SerializeWithCachedSizes(
       ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
       for (size_type i = 0; i < n; i++) {
         Sample_MapDataEntry_DoNotUse::MapEntryWrapper entry(nullptr, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second);
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(4, entry, output);
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(5, entry, output);
         Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
       }
     } else {
@@ -438,7 +898,7 @@ void Sample::SerializeWithCachedSizes(
           it = this->map_data().begin();
           it != this->map_data().end(); ++it) {
         Sample_MapDataEntry_DoNotUse::MapEntryWrapper entry(nullptr, it->first, it->second);
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(4, entry, output);
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(5, entry, output);
         Utf8Check::Check(&(*it));
       }
     }
@@ -486,7 +946,14 @@ void Sample::SerializeWithCachedSizes(
       WriteInt32NoTagToArray(this->addr_list_, target);
   }
 
-  // map<string, int32> map_data = 4;
+  // .Sample.Color color = 4;
+  if (this->has_color()) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        4, HasBitSetters::color(this), target);
+  }
+
+  // map<string, int32> map_data = 5;
   if (!this->map_data().empty()) {
     typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, ::PROTOBUF_NAMESPACE_ID::int32 >::const_pointer
         ConstPtr;
@@ -515,7 +982,7 @@ void Sample::SerializeWithCachedSizes(
       ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
       for (size_type i = 0; i < n; i++) {
         Sample_MapDataEntry_DoNotUse::MapEntryWrapper entry(nullptr, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second);
-        target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::InternalWriteMessageNoVirtualToArray(4, entry, target);
+        target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::InternalWriteMessageNoVirtualToArray(5, entry, target);
         Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
       }
     } else {
@@ -523,7 +990,7 @@ void Sample::SerializeWithCachedSizes(
           it = this->map_data().begin();
           it != this->map_data().end(); ++it) {
         Sample_MapDataEntry_DoNotUse::MapEntryWrapper entry(nullptr, it->first, it->second);
-        target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::InternalWriteMessageNoVirtualToArray(4, entry, target);
+        target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::InternalWriteMessageNoVirtualToArray(5, entry, target);
         Utf8Check::Check(&(*it));
       }
     }
@@ -565,7 +1032,7 @@ size_t Sample::ByteSizeLong() const {
     total_size += data_size;
   }
 
-  // map<string, int32> map_data = 4;
+  // map<string, int32> map_data = 5;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->map_data_size());
   for (::PROTOBUF_NAMESPACE_ID::Map< std::string, ::PROTOBUF_NAMESPACE_ID::int32 >::const_iterator
@@ -581,6 +1048,13 @@ size_t Sample::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->name());
+  }
+
+  // .Sample.Color color = 4;
+  if (this->has_color()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *color_);
   }
 
   // int32 id = 1;
@@ -623,6 +1097,9 @@ void Sample::MergeFrom(const Sample& from) {
 
     name_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.name_);
   }
+  if (from.has_color()) {
+    mutable_color()->::Sample::Color::MergeFrom(from.color());
+  }
   if (from.id() != 0) {
     set_id(from.id());
   }
@@ -657,6 +1134,7 @@ void Sample::InternalSwap(Sample* other) {
   map_data_.Swap(&other->map_data_);
   name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
+  swap(color_, other->color_);
   swap(id_, other->id_);
 }
 
@@ -668,6 +1146,9 @@ void Sample::InternalSwap(Sample* other) {
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace Sample
 PROTOBUF_NAMESPACE_OPEN
+template<> PROTOBUF_NOINLINE ::Sample::Color* Arena::CreateMaybeMessage< ::Sample::Color >(Arena* arena) {
+  return Arena::CreateInternal< ::Sample::Color >(arena);
+}
 template<> PROTOBUF_NOINLINE ::Sample::Sample_MapDataEntry_DoNotUse* Arena::CreateMaybeMessage< ::Sample::Sample_MapDataEntry_DoNotUse >(Arena* arena) {
   return Arena::CreateInternal< ::Sample::Sample_MapDataEntry_DoNotUse >(arena);
 }

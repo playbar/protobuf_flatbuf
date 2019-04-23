@@ -1,9 +1,9 @@
 // ./protoc Sample.proto --cpp_out=.
 syntax = "proto3";
 
-package Sample;
+package pb;
 
-message Color
+message pb_color
 {
     float r = 1;
     float g = 2;
@@ -15,6 +15,7 @@ message Sample {
     int32 id = 1;
     string name = 2;
     repeated int32 addr_list = 3;
-    Color    color = 4;
-    map<string, int32> map_data = 5;
+    pb_color color = 4;
+    repeated pb_color colors = 5;
+    map<string, int32> map_data = 6;
 }

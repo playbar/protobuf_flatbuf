@@ -57,43 +57,43 @@ struct TableStruct_Sample_2eproto {
   static const ::PROTOBUF_NAMESPACE_ID::uint32 offsets[];
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_Sample_2eproto;
-namespace Sample {
-class Color;
-class ColorDefaultTypeInternal;
-extern ColorDefaultTypeInternal _Color_default_instance_;
+namespace pb {
 class Sample;
 class SampleDefaultTypeInternal;
 extern SampleDefaultTypeInternal _Sample_default_instance_;
 class Sample_MapDataEntry_DoNotUse;
 class Sample_MapDataEntry_DoNotUseDefaultTypeInternal;
 extern Sample_MapDataEntry_DoNotUseDefaultTypeInternal _Sample_MapDataEntry_DoNotUse_default_instance_;
-}  // namespace Sample
+class pb_color;
+class pb_colorDefaultTypeInternal;
+extern pb_colorDefaultTypeInternal _pb_color_default_instance_;
+}  // namespace pb
 PROTOBUF_NAMESPACE_OPEN
-template<> ::Sample::Color* Arena::CreateMaybeMessage<::Sample::Color>(Arena*);
-template<> ::Sample::Sample* Arena::CreateMaybeMessage<::Sample::Sample>(Arena*);
-template<> ::Sample::Sample_MapDataEntry_DoNotUse* Arena::CreateMaybeMessage<::Sample::Sample_MapDataEntry_DoNotUse>(Arena*);
+template<> ::pb::Sample* Arena::CreateMaybeMessage<::pb::Sample>(Arena*);
+template<> ::pb::Sample_MapDataEntry_DoNotUse* Arena::CreateMaybeMessage<::pb::Sample_MapDataEntry_DoNotUse>(Arena*);
+template<> ::pb::pb_color* Arena::CreateMaybeMessage<::pb::pb_color>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
-namespace Sample {
+namespace pb {
 
 // ===================================================================
 
-class Color :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Sample.Color) */ {
+class pb_color :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:pb.pb_color) */ {
  public:
-  Color();
-  virtual ~Color();
+  pb_color();
+  virtual ~pb_color();
 
-  Color(const Color& from);
-  Color(Color&& from) noexcept
-    : Color() {
+  pb_color(const pb_color& from);
+  pb_color(pb_color&& from) noexcept
+    : pb_color() {
     *this = ::std::move(from);
   }
 
-  inline Color& operator=(const Color& from) {
+  inline pb_color& operator=(const pb_color& from) {
     CopyFrom(from);
     return *this;
   }
-  inline Color& operator=(Color&& from) noexcept {
+  inline pb_color& operator=(pb_color&& from) noexcept {
     if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -111,34 +111,34 @@ class Color :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const Color& default_instance();
+  static const pb_color& default_instance();
 
   static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
-  static inline const Color* internal_default_instance() {
-    return reinterpret_cast<const Color*>(
-               &_Color_default_instance_);
+  static inline const pb_color* internal_default_instance() {
+    return reinterpret_cast<const pb_color*>(
+               &_pb_color_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     0;
 
-  void Swap(Color* other);
-  friend void swap(Color& a, Color& b) {
+  void Swap(pb_color* other);
+  friend void swap(pb_color& a, pb_color& b) {
     a.Swap(&b);
   }
 
   // implements Message ----------------------------------------------
 
-  inline Color* New() const final {
-    return CreateMaybeMessage<Color>(nullptr);
+  inline pb_color* New() const final {
+    return CreateMaybeMessage<pb_color>(nullptr);
   }
 
-  Color* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<Color>(arena);
+  pb_color* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<pb_color>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const Color& from);
-  void MergeFrom(const Color& from);
+  void CopyFrom(const pb_color& from);
+  void MergeFrom(const pb_color& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -159,10 +159,10 @@ class Color :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(Color* other);
+  void InternalSwap(pb_color* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "Sample.Color";
+    return "pb.pb_color";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -210,7 +210,7 @@ class Color :
   float a() const;
   void set_a(float value);
 
-  // @@protoc_insertion_point(class_scope:Sample.Color)
+  // @@protoc_insertion_point(class_scope:pb.pb_color)
  private:
   class HasBitSetters;
 
@@ -240,7 +240,7 @@ public:
   void MergeFrom(const Sample_MapDataEntry_DoNotUse& other);
   static const Sample_MapDataEntry_DoNotUse* internal_default_instance() { return reinterpret_cast<const Sample_MapDataEntry_DoNotUse*>(&_Sample_MapDataEntry_DoNotUse_default_instance_); }
   static bool ValidateKey(std::string* s) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(s->data(), s->size(), ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE, "Sample.Sample.MapDataEntry.key");
+    return ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(s->data(), s->size(), ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE, "pb.Sample.MapDataEntry.key");
  }
   static bool ValidateValue(void*) { return true; }
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& other) final;
@@ -257,7 +257,7 @@ public:
 // -------------------------------------------------------------------
 
 class Sample :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:Sample.Sample) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:pb.Sample) */ {
  public:
   Sample();
   virtual ~Sample();
@@ -341,7 +341,7 @@ class Sample :
   void InternalSwap(Sample* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "Sample.Sample";
+    return "pb.Sample";
   }
   private:
   inline ::PROTOBUF_NAMESPACE_ID::Arena* GetArenaNoVirtual() const {
@@ -378,10 +378,22 @@ class Sample :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::int32 >*
       mutable_addr_list();
 
-  // map<string, int32> map_data = 5;
+  // repeated .pb.pb_color colors = 5;
+  int colors_size() const;
+  void clear_colors();
+  static const int kColorsFieldNumber = 5;
+  ::pb::pb_color* mutable_colors(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::pb::pb_color >*
+      mutable_colors();
+  const ::pb::pb_color& colors(int index) const;
+  ::pb::pb_color* add_colors();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::pb::pb_color >&
+      colors() const;
+
+  // map<string, int32> map_data = 6;
   int map_data_size() const;
   void clear_map_data();
-  static const int kMapDataFieldNumber = 5;
+  static const int kMapDataFieldNumber = 6;
   const ::PROTOBUF_NAMESPACE_ID::Map< std::string, ::PROTOBUF_NAMESPACE_ID::int32 >&
       map_data() const;
   ::PROTOBUF_NAMESPACE_ID::Map< std::string, ::PROTOBUF_NAMESPACE_ID::int32 >*
@@ -399,14 +411,14 @@ class Sample :
   std::string* release_name();
   void set_allocated_name(std::string* name);
 
-  // .Sample.Color color = 4;
+  // .pb.pb_color color = 4;
   bool has_color() const;
   void clear_color();
   static const int kColorFieldNumber = 4;
-  const ::Sample::Color& color() const;
-  ::Sample::Color* release_color();
-  ::Sample::Color* mutable_color();
-  void set_allocated_color(::Sample::Color* color);
+  const ::pb::pb_color& color() const;
+  ::pb::pb_color* release_color();
+  ::pb::pb_color* mutable_color();
+  void set_allocated_color(::pb::pb_color* color);
 
   // int32 id = 1;
   void clear_id();
@@ -414,13 +426,14 @@ class Sample :
   ::PROTOBUF_NAMESPACE_ID::int32 id() const;
   void set_id(::PROTOBUF_NAMESPACE_ID::int32 value);
 
-  // @@protoc_insertion_point(class_scope:Sample.Sample)
+  // @@protoc_insertion_point(class_scope:pb.Sample)
  private:
   class HasBitSetters;
 
   ::PROTOBUF_NAMESPACE_ID::internal::InternalMetadataWithArena _internal_metadata_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::int32 > addr_list_;
   mutable std::atomic<int> _addr_list_cached_byte_size_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::pb::pb_color > colors_;
   ::PROTOBUF_NAMESPACE_ID::internal::MapField<
       Sample_MapDataEntry_DoNotUse,
       std::string, ::PROTOBUF_NAMESPACE_ID::int32,
@@ -428,7 +441,7 @@ class Sample :
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_INT32,
       0 > map_data_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
-  ::Sample::Color* color_;
+  ::pb::pb_color* color_;
   ::PROTOBUF_NAMESPACE_ID::int32 id_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_Sample_2eproto;
@@ -442,62 +455,62 @@ class Sample :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// Color
+// pb_color
 
 // float r = 1;
-inline void Color::clear_r() {
+inline void pb_color::clear_r() {
   r_ = 0;
 }
-inline float Color::r() const {
-  // @@protoc_insertion_point(field_get:Sample.Color.r)
+inline float pb_color::r() const {
+  // @@protoc_insertion_point(field_get:pb.pb_color.r)
   return r_;
 }
-inline void Color::set_r(float value) {
+inline void pb_color::set_r(float value) {
   
   r_ = value;
-  // @@protoc_insertion_point(field_set:Sample.Color.r)
+  // @@protoc_insertion_point(field_set:pb.pb_color.r)
 }
 
 // float g = 2;
-inline void Color::clear_g() {
+inline void pb_color::clear_g() {
   g_ = 0;
 }
-inline float Color::g() const {
-  // @@protoc_insertion_point(field_get:Sample.Color.g)
+inline float pb_color::g() const {
+  // @@protoc_insertion_point(field_get:pb.pb_color.g)
   return g_;
 }
-inline void Color::set_g(float value) {
+inline void pb_color::set_g(float value) {
   
   g_ = value;
-  // @@protoc_insertion_point(field_set:Sample.Color.g)
+  // @@protoc_insertion_point(field_set:pb.pb_color.g)
 }
 
 // float b = 3;
-inline void Color::clear_b() {
+inline void pb_color::clear_b() {
   b_ = 0;
 }
-inline float Color::b() const {
-  // @@protoc_insertion_point(field_get:Sample.Color.b)
+inline float pb_color::b() const {
+  // @@protoc_insertion_point(field_get:pb.pb_color.b)
   return b_;
 }
-inline void Color::set_b(float value) {
+inline void pb_color::set_b(float value) {
   
   b_ = value;
-  // @@protoc_insertion_point(field_set:Sample.Color.b)
+  // @@protoc_insertion_point(field_set:pb.pb_color.b)
 }
 
 // float a = 4;
-inline void Color::clear_a() {
+inline void pb_color::clear_a() {
   a_ = 0;
 }
-inline float Color::a() const {
-  // @@protoc_insertion_point(field_get:Sample.Color.a)
+inline float pb_color::a() const {
+  // @@protoc_insertion_point(field_get:pb.pb_color.a)
   return a_;
 }
-inline void Color::set_a(float value) {
+inline void pb_color::set_a(float value) {
   
   a_ = value;
-  // @@protoc_insertion_point(field_set:Sample.Color.a)
+  // @@protoc_insertion_point(field_set:pb.pb_color.a)
 }
 
 // -------------------------------------------------------------------
@@ -511,13 +524,13 @@ inline void Sample::clear_id() {
   id_ = 0;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 Sample::id() const {
-  // @@protoc_insertion_point(field_get:Sample.Sample.id)
+  // @@protoc_insertion_point(field_get:pb.Sample.id)
   return id_;
 }
 inline void Sample::set_id(::PROTOBUF_NAMESPACE_ID::int32 value) {
   
   id_ = value;
-  // @@protoc_insertion_point(field_set:Sample.Sample.id)
+  // @@protoc_insertion_point(field_set:pb.Sample.id)
 }
 
 // string name = 2;
@@ -525,39 +538,39 @@ inline void Sample::clear_name() {
   name_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline const std::string& Sample::name() const {
-  // @@protoc_insertion_point(field_get:Sample.Sample.name)
+  // @@protoc_insertion_point(field_get:pb.Sample.name)
   return name_.GetNoArena();
 }
 inline void Sample::set_name(const std::string& value) {
   
   name_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Sample.Sample.name)
+  // @@protoc_insertion_point(field_set:pb.Sample.name)
 }
 inline void Sample::set_name(std::string&& value) {
   
   name_.SetNoArena(
     &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Sample.Sample.name)
+  // @@protoc_insertion_point(field_set_rvalue:pb.Sample.name)
 }
 inline void Sample::set_name(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   name_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Sample.Sample.name)
+  // @@protoc_insertion_point(field_set_char:pb.Sample.name)
 }
 inline void Sample::set_name(const char* value, size_t size) {
   
   name_.SetNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Sample.Sample.name)
+  // @@protoc_insertion_point(field_set_pointer:pb.Sample.name)
 }
 inline std::string* Sample::mutable_name() {
   
-  // @@protoc_insertion_point(field_mutable:Sample.Sample.name)
+  // @@protoc_insertion_point(field_mutable:pb.Sample.name)
   return name_.MutableNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 inline std::string* Sample::release_name() {
-  // @@protoc_insertion_point(field_release:Sample.Sample.name)
+  // @@protoc_insertion_point(field_release:pb.Sample.name)
   
   return name_.ReleaseNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
@@ -568,7 +581,7 @@ inline void Sample::set_allocated_name(std::string* name) {
     
   }
   name_.SetAllocatedNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name);
-  // @@protoc_insertion_point(field_set_allocated:Sample.Sample.name)
+  // @@protoc_insertion_point(field_set_allocated:pb.Sample.name)
 }
 
 // repeated int32 addr_list = 3;
@@ -579,29 +592,29 @@ inline void Sample::clear_addr_list() {
   addr_list_.Clear();
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 Sample::addr_list(int index) const {
-  // @@protoc_insertion_point(field_get:Sample.Sample.addr_list)
+  // @@protoc_insertion_point(field_get:pb.Sample.addr_list)
   return addr_list_.Get(index);
 }
 inline void Sample::set_addr_list(int index, ::PROTOBUF_NAMESPACE_ID::int32 value) {
   addr_list_.Set(index, value);
-  // @@protoc_insertion_point(field_set:Sample.Sample.addr_list)
+  // @@protoc_insertion_point(field_set:pb.Sample.addr_list)
 }
 inline void Sample::add_addr_list(::PROTOBUF_NAMESPACE_ID::int32 value) {
   addr_list_.Add(value);
-  // @@protoc_insertion_point(field_add:Sample.Sample.addr_list)
+  // @@protoc_insertion_point(field_add:pb.Sample.addr_list)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::int32 >&
 Sample::addr_list() const {
-  // @@protoc_insertion_point(field_list:Sample.Sample.addr_list)
+  // @@protoc_insertion_point(field_list:pb.Sample.addr_list)
   return addr_list_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::int32 >*
 Sample::mutable_addr_list() {
-  // @@protoc_insertion_point(field_mutable_list:Sample.Sample.addr_list)
+  // @@protoc_insertion_point(field_mutable_list:pb.Sample.addr_list)
   return &addr_list_;
 }
 
-// .Sample.Color color = 4;
+// .pb.pb_color color = 4;
 inline bool Sample::has_color() const {
   return this != internal_default_instance() && color_ != nullptr;
 }
@@ -611,29 +624,29 @@ inline void Sample::clear_color() {
   }
   color_ = nullptr;
 }
-inline const ::Sample::Color& Sample::color() const {
-  const ::Sample::Color* p = color_;
-  // @@protoc_insertion_point(field_get:Sample.Sample.color)
-  return p != nullptr ? *p : *reinterpret_cast<const ::Sample::Color*>(
-      &::Sample::_Color_default_instance_);
+inline const ::pb::pb_color& Sample::color() const {
+  const ::pb::pb_color* p = color_;
+  // @@protoc_insertion_point(field_get:pb.Sample.color)
+  return p != nullptr ? *p : *reinterpret_cast<const ::pb::pb_color*>(
+      &::pb::_pb_color_default_instance_);
 }
-inline ::Sample::Color* Sample::release_color() {
-  // @@protoc_insertion_point(field_release:Sample.Sample.color)
+inline ::pb::pb_color* Sample::release_color() {
+  // @@protoc_insertion_point(field_release:pb.Sample.color)
   
-  ::Sample::Color* temp = color_;
+  ::pb::pb_color* temp = color_;
   color_ = nullptr;
   return temp;
 }
-inline ::Sample::Color* Sample::mutable_color() {
+inline ::pb::pb_color* Sample::mutable_color() {
   
   if (color_ == nullptr) {
-    auto* p = CreateMaybeMessage<::Sample::Color>(GetArenaNoVirtual());
+    auto* p = CreateMaybeMessage<::pb::pb_color>(GetArenaNoVirtual());
     color_ = p;
   }
-  // @@protoc_insertion_point(field_mutable:Sample.Sample.color)
+  // @@protoc_insertion_point(field_mutable:pb.Sample.color)
   return color_;
 }
-inline void Sample::set_allocated_color(::Sample::Color* color) {
+inline void Sample::set_allocated_color(::pb::pb_color* color) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaNoVirtual();
   if (message_arena == nullptr) {
     delete color_;
@@ -649,10 +662,40 @@ inline void Sample::set_allocated_color(::Sample::Color* color) {
     
   }
   color_ = color;
-  // @@protoc_insertion_point(field_set_allocated:Sample.Sample.color)
+  // @@protoc_insertion_point(field_set_allocated:pb.Sample.color)
 }
 
-// map<string, int32> map_data = 5;
+// repeated .pb.pb_color colors = 5;
+inline int Sample::colors_size() const {
+  return colors_.size();
+}
+inline void Sample::clear_colors() {
+  colors_.Clear();
+}
+inline ::pb::pb_color* Sample::mutable_colors(int index) {
+  // @@protoc_insertion_point(field_mutable:pb.Sample.colors)
+  return colors_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::pb::pb_color >*
+Sample::mutable_colors() {
+  // @@protoc_insertion_point(field_mutable_list:pb.Sample.colors)
+  return &colors_;
+}
+inline const ::pb::pb_color& Sample::colors(int index) const {
+  // @@protoc_insertion_point(field_get:pb.Sample.colors)
+  return colors_.Get(index);
+}
+inline ::pb::pb_color* Sample::add_colors() {
+  // @@protoc_insertion_point(field_add:pb.Sample.colors)
+  return colors_.Add();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::pb::pb_color >&
+Sample::colors() const {
+  // @@protoc_insertion_point(field_list:pb.Sample.colors)
+  return colors_;
+}
+
+// map<string, int32> map_data = 6;
 inline int Sample::map_data_size() const {
   return map_data_.size();
 }
@@ -661,12 +704,12 @@ inline void Sample::clear_map_data() {
 }
 inline const ::PROTOBUF_NAMESPACE_ID::Map< std::string, ::PROTOBUF_NAMESPACE_ID::int32 >&
 Sample::map_data() const {
-  // @@protoc_insertion_point(field_map:Sample.Sample.map_data)
+  // @@protoc_insertion_point(field_map:pb.Sample.map_data)
   return map_data_.GetMap();
 }
 inline ::PROTOBUF_NAMESPACE_ID::Map< std::string, ::PROTOBUF_NAMESPACE_ID::int32 >*
 Sample::mutable_map_data() {
-  // @@protoc_insertion_point(field_mutable_map:Sample.Sample.map_data)
+  // @@protoc_insertion_point(field_mutable_map:pb.Sample.map_data)
   return map_data_.MutableMap();
 }
 
@@ -680,7 +723,7 @@ Sample::mutable_map_data() {
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace Sample
+}  // namespace pb
 
 // @@protoc_insertion_point(global_scope)
 

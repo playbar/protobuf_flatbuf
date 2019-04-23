@@ -12,6 +12,7 @@
 #include <fcntl.h>
 
 using namespace std;
+using namespace pb;
 
 int main()
 {
@@ -42,7 +43,7 @@ int main()
             return -1;
         }
 
-        Sample::Sample sample;
+        Sample sample;
         if (!sample.ParseFromArray(buf, size)) {
             std::cout << "failed to parse" << std::endl;
             return -1;
@@ -52,6 +53,12 @@ int main()
             << sample.name().c_str() <<", addr size:" << sample.addr_list_size() << std::endl;
 
         cout<<"color, a = "<< sample.color().a() << ", g = " << sample.color().g() << endl;
+
+        auto colors = sample.colors();
+        for( int i = 0; i < colors.size(); ++i )
+        {
+            cout<<"colors, a = "<< colors[i].a() << ", g = " << colors[i].g() << endl;
+        }
 
 
         auto data = sample.map_data();

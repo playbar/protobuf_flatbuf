@@ -91,6 +91,6 @@ int main(int argc, char* argv[])
             return -1;
         }
     }
-
+    google::protobuf::ShutdownProtobufLibrary();
     return 0;
 }

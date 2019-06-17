@@ -16,4 +16,5 @@ add_subdirectory(pbtest)
 #add_subdirectory(pb)
 add_subdirectory(pbnew)
 add_subdirectory(fbtest)
+add_subdirectory(protozero)
 
